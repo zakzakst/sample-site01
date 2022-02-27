@@ -1,38 +1,56 @@
 {% set NAV_ITEMS = [
   {
-    id: 'home',
-    link: '/',
-    label: 'HOME'
+    id: 'about',
+    link: '/about.html',
+    label: '○○○○について'
   },
   {
-    id: 'parts',
-    link: '/parts.html',
-    label: 'PARTS'
+    id: 'menu',
+    link: '/menu.html',
+    label: 'メニュー'
   },
   {
-    id: 'page',
-    link: '/page.html',
-    label: 'PAGE'
+    id: 'cafe',
+    link: '/cafe.html',
+    label: '店内設備'
+  },
+  {
+    id: 'news',
+    link: '/news.html',
+    label: 'お知らせ'
+  },
+  {
+    id: 'recruit',
+    link: '/recruit.html',
+    label: '採用情報'
   }
 ] %}
 
 <!-- ▼▼▼ ヘッダー ▼▼▼ -->
-<header>
-  <nav>
-    <ul>
-      {% for ITEM in NAV_ITEMS %}
-        {# クラス名を判定 #}
-        {% if ITEM.id === PAGE_DATA.NAV %}
-          {% set CLASS = ' class="--current"' %}
-        {% else %}
-          {% set CLASS = '' %}
-        {% endif %}
+<header class="header">
+  <div class="header__logo">
+    {% if PAGE_DATA.NAV === 'top' %}
+      <h1>社名○○○○</h1>
+    {% else %}
+      <a href="/">社名○○○○</a>
+    {% endif %}
+  </div>
+  <ul class="header__nav-items">
+    {% for ITEM in NAV_ITEMS %}
+      {# クラス名を判定 #}
+      {% if ITEM.id === PAGE_DATA.NAV %}
+        {% set CLASS = ' class="--current"' %}
+      {% else %}
+        {% set CLASS = '' %}
+      {% endif %}
 
-        <li>
-          <a href="{{ ITEM.link }}"{{ CLASS | safe }}>{{ ITEM.label }}</a>
-        </li>
-      {% endfor %}
-    </ul>
-  </nav>
+      <li class="header__nav-item">
+        <a class="header__nav-link" href="{{ ITEM.link }}"{{ CLASS | safe }}>{{ ITEM.label }}</a>
+      </li>
+    {% endfor %}
+  </ul>
+  <div class="header__form">
+    <a>aaa</a>
+  </div>
 </header>
 <!-- ▲▲▲ ヘッダー ▲▲▲ -->

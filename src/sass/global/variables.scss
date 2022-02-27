@@ -1,5 +1,24 @@
-$c_primary: #f00;
+// 色
+$c_primary: #b25900;
+$c_secondary: #343434;
+$c_accent: #ee8b26;
+$c_white: #fff;
+$c_text: #343434;
 
+// フォントファミリー
+$ff_default: 'Noto Sans JP', sans-serif;
+
+// Zインデックス
+$z_float: 100;
+
+// デュレーション
+$d_default: .5s;
+
+// 影
+$c_shadow_1: 0 4px 8px rgba(#000, 0.1);
+$c_shadow_2: 0 4px 8px rgba(#000, 0.2);
+
+// ブレークポイント
 $break_points: (
   sm: 576px,
   md: 768px,
@@ -8,6 +27,7 @@ $break_points: (
   xxl: 1400px,
 );
 
+// コンテナサイズ
 $width_containers: (
   sm: 540px,
   md: 720px,
@@ -16,6 +36,7 @@ $width_containers: (
   xxl: 1150px,
 );
 
+// スペース
 $spaces: (
   0: 0,
   1: 8,

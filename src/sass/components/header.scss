@@ -1,0 +1,70 @@
+@use "../global" as g;
+
+$BLOCK_NAME: ".header";
+
+#{ $BLOCK_NAME } {
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: g.$z_float;
+  display: flex;
+  align-items: center;
+  padding: 12px 24px;
+  background: g.$c_white;
+  box-shadow: g.$c_shadow_2;
+
+  &__logo {
+    font-weight: bold;
+  }
+
+  &__nav-items {
+    display: flex;
+    margin-left: 24px;
+    font-size: 12px;
+  }
+
+  &__nav-item {
+    padding-left: 12px;
+  }
+
+  &__nav-link {
+    position: relative;
+    display: block;
+    padding-left: 20px;
+    transition: color g.$d_default;
+    &::before,
+    &::after {
+      position: absolute;
+      top: 1px;
+      bottom: 0;
+      left: 6px;
+      display: block;
+      margin: auto;
+      width: 6px;
+      height: 6px;
+      content: '';
+      border-radius: 50%;
+    }
+    &::before {
+      background: g.$c_primary;
+      z-index: 1;
+    }
+    &::after {
+      opacity: 0;
+      border: 0.5px solid g.$c_primary;
+      transition: all g.$d_default;
+    }
+    &:hover {
+      color: g.$c_primary;
+      &::after {
+        opacity: 1;
+        transform: scale(2);
+      }
+    }
+  }
+
+  &__form {
+    margin-left: auto;
+  }
+}
