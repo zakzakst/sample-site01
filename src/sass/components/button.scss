@@ -1,0 +1,53 @@
+@use "../global" as g;
+
+$BLOCK_NAME: ".button";
+
+#{ $BLOCK_NAME } {
+  text-align: center;
+  padding: 4px 24px 6px;
+  color: g.$c_white;
+  transition: background-color g.$d_default;
+  cursor: pointer;
+
+  &.--primary {
+    background: g.$c_primary;
+    &:hover {
+      background-color: g.$c_primary_dark;
+    }
+  }
+
+  &.--secondary {
+    background: g.$c_secondary;
+    &:hover {
+      background-color: g.$c_secondary_dark;
+    }
+  }
+
+  &.--accent {
+    background: g.$c_accent;
+    &:hover {
+      background-color: g.$c_accent_dark;
+    }
+  }
+
+  &.--rounded {
+    border-radius: 9999px;
+  }
+
+  &.--has-icon {
+    & > span {
+      position: relative;
+      display: inline-block;
+      padding-left: 1.5em;
+    }
+    @at-root #{ $BLOCK_NAME }__icon {
+      position: absolute;
+      display: block;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      width: 1em;
+      margin: auto;
+    }
+  }
+}
