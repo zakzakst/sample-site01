@@ -1,0 +1,62 @@
+@use "../global" as g;
+
+$BLOCK_NAME: ".header-sp";
+
+#{ $BLOCK_NAME } {
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: g.$z_float;
+  display: flex;
+  align-items: center;
+  padding: 8px 16px;
+  background: g.$c_white;
+  box-shadow: g.$c_shadow_2;
+
+  &__logo {
+    font-weight: bold;
+  }
+
+  &__menu-button {
+    position: relative;
+    display: block;
+    margin-left: auto;
+    width: 36px;
+    height: 36px;
+    cursor: pointer;
+    & > span {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      display: block;
+      height: 2px;
+      background: g.$c_black;
+      margin: auto;
+      transition: all g.$d_default;
+      &:nth-child(2) {
+        transform: translateY(12px);
+      }
+      &:nth-child(3) {
+        transform: translateY(-12px);
+      }
+    }
+    &.--open {
+      & > span:nth-child(1) {
+        opacity: 0;
+      }
+      & > span:nth-child(2) {
+        transform: translateY(0) rotate(45deg);
+      }
+      & > span:nth-child(3) {
+        transform: translateY(0) rotate(-45deg);
+      }
+    }
+  }
+
+  @include g.Mq(lg) {
+    display: none;
+  }
+}

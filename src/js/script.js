@@ -1,3 +1,3 @@
-import { SampleInit } from './modules/sample';
+import { HeaderSpInit } from './modules/header-sp';
 
-SampleInit();
+HeaderSpInit();
