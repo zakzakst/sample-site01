@@ -1,32 +1,5 @@
-{% set NAV_ITEMS = [
-  {
-    id: 'about',
-    link: '/about.html',
-    label: '○○○○について'
-  },
-  {
-    id: 'menu',
-    link: '/menu.html',
-    label: 'メニュー'
-  },
-  {
-    id: 'cafe',
-    link: '/cafe.html',
-    label: '店内設備'
-  },
-  {
-    id: 'news',
-    link: '/news.html',
-    label: 'お知らせ'
-  },
-  {
-    id: 'recruit',
-    link: '/recruit.html',
-    label: '採用情報'
-  }
-] %}
-
-<!-- ▼▼▼ ヘッダー ▼▼▼ -->
+{% macro default(NAV_ITEMS) %}
+<!-- ▼▼▼ ヘッダー（PC） ▼▼▼ -->
 <header class="header">
   <div class="header__logo">
     {% if PAGE_DATA.NAV === 'top' %}
@@ -50,12 +23,13 @@
     {% endfor %}
   </ul>
   <div class="header__form">
-    <a class="button --secondary --rounded --has-icon">
+    {# <a class="button --secondary --rounded --has-icon">
       <span><i class="fas fa-phone button__icon"></i>00-0000-0000</span>
-    </a>
+    </a> #}
     <a class="button --accent --rounded --has-icon">
       <span><i class="fas fa-envelope button__icon"></i>お問い合わせ</span>
     </a>
   </div>
 </header>
-<!-- ▲▲▲ ヘッダー ▲▲▲ -->
+<!-- ▲▲▲ ヘッダー（PC） ▲▲▲ -->
+{% endmacro %}
