@@ -1,14 +1,43 @@
 {% macro default(NAV_ITEMS) %}
 <!-- ▼▼▼ ヘッダー（SP） ▼▼▼ -->
-<div class="header-sp">
-  <div class="header-sp__logo">
-    <a href="/">社名○○○○</a>
+<div class="header-sp__wrapper">
+  <div class="header-sp">
+    <div class="header-sp__logo">
+      <a href="/">社名○○○○</a>
+    </div>
+    <button id="js-header-sp-button" class="header-sp__button">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
   </div>
-  <button id="js-header-sp-menu-button" class="header-sp__menu-button">
-    <span></span>
-    <span></span>
-    <span></span>
-  </button>
+  <div id="js-header-sp-menu" class="header-sp__menu">
+    <div class="header-sp__menu-content">
+      <ul class="header-sp__menu-nav-items">
+        {% for ITEM in NAV_ITEMS %}
+          {# クラス名を判定 #}
+          {% if ITEM.id === PAGE_DATA.NAV %}
+            {% set CLASS = ' class="--current"' %}
+          {% else %}
+            {% set CLASS = '' %}
+          {% endif %}
+
+          <li class="header-sp__menu-nav-item">
+            <a class="link" href="{{ ITEM.link }}"{{ CLASS | safe }}>{{ ITEM.label }}</a>
+          </li>
+        {% endfor %}
+      </ul>
+      <div class="header-sp__menu-form">
+        <a class="button --secondary --rounded --has-icon">
+          <span><i class="fas fa-phone button__icon"></i>00-0000-0000</span>
+        </a>
+        <a class="button --accent --rounded --has-icon">
+          <span><i class="fas fa-envelope button__icon"></i>お問い合わせ</span>
+        </a>
+      </div>
+    </div>
+    <div id="js-header-sp-menu-bg" class="header-sp__menu-bg"></div>
+  </div>
 </div>
 <!-- ▲▲▲ ヘッダー（SP） ▲▲▲ -->
 {% endmacro %}
