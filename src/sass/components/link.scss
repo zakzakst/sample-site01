@@ -1,0 +1,39 @@
+@use "../global" as g;
+
+$BLOCK_NAME: ".link";
+
+#{ $BLOCK_NAME } {
+  position: relative;
+  display: block;
+  padding-left: 20px;
+  transition: color g.$d_default;
+  &::before,
+  &::after {
+    position: absolute;
+    top: 1px;
+    bottom: 0;
+    left: 6px;
+    display: block;
+    margin: auto;
+    width: 6px;
+    height: 6px;
+    content: '';
+    border-radius: 50%;
+  }
+  &::before {
+    background: g.$c_primary;
+    z-index: 1;
+  }
+  &::after {
+    opacity: 0;
+    border: 0.5px solid g.$c_primary;
+    transition: all g.$d_default;
+  }
+  &:hover {
+    color: g.$c_primary;
+    &::after {
+      opacity: 1;
+      transform: scale(2);
+    }
+  }
+}

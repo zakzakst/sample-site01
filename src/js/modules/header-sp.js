@@ -5,7 +5,8 @@ export function HeaderSpInit() {
 
 class HeaderSp {
   constructor() {
-    this.buttonEl = document.getElementById('js-header-sp-menu-button');
+    this.buttonEl = document.getElementById('js-header-sp-button');
+    this.menuEl = document.getElementById('js-header-sp-menu');
   }
 
   init() {
@@ -14,10 +15,12 @@ class HeaderSp {
 
   menuOpen() {
     this.buttonEl.classList.add('--open');
+    this.menuEl.classList.add('--open');
   }
 
   menuClose() {
     this.buttonEl.classList.remove('--open');
+    this.menuEl.classList.remove('--open');
   }
 
   toggleMenu() {
