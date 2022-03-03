@@ -14,7 +14,7 @@ const webpackConf = require('../webpack.config');
 /**
  * 関数
  */
-const WEBPACK = () => {
+const WEBPACK = (done) => {
   return webpackStream(webpackConf, webpack).pipe(dest(dist));
 };
 
