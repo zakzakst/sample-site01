@@ -4,7 +4,7 @@ $BLOCK_NAME: ".header-sp";
 
 #{ $BLOCK_NAME } {
   &__wrapper {
-    z-index: g.$z_float;
+    z-index: g.$z_fixed;
     @include g.Mq(lg) {
       display: none;
     }

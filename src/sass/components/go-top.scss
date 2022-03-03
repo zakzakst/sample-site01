@@ -4,25 +4,40 @@ $BLOCK_NAME: ".go-top";
 
 #{ $BLOCK_NAME } {
   position: fixed;
-  display: flex;
-  align-items: center;
-  justify-content: center;
   width: 48px;
   height: 48px;
-  background: g.$c_accent;
   bottom: 8px;
   right: 24px;
-  border-radius: 50%;
   z-index: g.$z_float;
-  box-shadow: g.$c_shadow_1;
-  color: g.$c_white;
-  cursor: pointer;
-  transition: background-color g.$d_default;
-  &:hover {
-    background-color: g.$c_accent_dark;
+  visibility: hidden;
+  transition-delay: g.$d_default;
+  &.--show {
+    visibility: visible;
+    transition-delay: 0s;
   }
-  &.--pos-bottom {
+  &.--fix-bottom {
     position: absolute;
     bottom: -24px;
+  }
+
+  &__button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    box-shadow: g.$c_shadow_1;
+    color: g.$c_white;
+    background: g.$c_accent;
+    cursor: pointer;
+    transition: background-color g.$d_default, opacity g.$d_default;
+    opacity: 0;
+    &:hover {
+      background-color: g.$c_accent_dark;
+    }
+    @at-root #{ $BLOCK_NAME }.--show & {
+      opacity: 1;
+    }
   }
 }
