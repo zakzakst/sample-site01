@@ -1,0 +1,7 @@
+@use "../global" as g;
+
+$BLOCK_NAME: ".footer";
+
+#{ $BLOCK_NAME } {
+  background: #000;
+}
