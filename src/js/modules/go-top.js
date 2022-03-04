@@ -9,6 +9,7 @@ export function GoTopInit() {
 
 class GoTop {
   constructor() {
+    this.htmlEl = document.documentElement;
     this.el = document.getElementById('js-go-top');
     this.mainEl = document.getElementById('js-layout-main');
     this.footerEl = document.getElementById('js-footer');
@@ -27,9 +28,11 @@ class GoTop {
       trigger: this.mainEl,
       start: `top -${this.showOffset}px`,
       onEnter: () => {
+        if (this.htmlEl.classList.contains('--window-fixed')) return;
         this.el.classList.add('--show');
       },
       onLeaveBack: () => {
+        if (this.htmlEl.classList.contains('--window-fixed')) return;
         this.el.classList.remove('--show');
       },
     });
@@ -40,9 +43,11 @@ class GoTop {
       trigger: this.footerEl,
       start: `top 100%-=${this.fixBottomOffset}px`,
       onEnter: () => {
+        if (this.htmlEl.classList.contains('--window-fixed')) return;
         this.el.classList.add('--fix-bottom');
       },
       onLeaveBack: () => {
+        if (this.htmlEl.classList.contains('--window-fixed')) return;
         this.el.classList.remove('--fix-bottom');
       },
     });

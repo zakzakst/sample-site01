@@ -74,3 +74,13 @@ $grid_gap: 16px;
     }
   }
 }
+
+// 画面固定
+html.--window-fixed {
+  overflow-y: scroll;
+  & body {
+    position: fixed;
+    left: 0;
+    right: 0;
+  }
+}
