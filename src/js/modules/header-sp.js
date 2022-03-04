@@ -5,6 +5,7 @@ export function HeaderSpInit() {
 
 class HeaderSp {
   constructor() {
+    this.htmlEl = document.documentElement;
     this.buttonEl = document.getElementById('js-header-sp-button');
     this.menuEl = document.getElementById('js-header-sp-menu');
     this.menuBgEl = document.getElementById('js-header-sp-menu-bg');
@@ -39,19 +40,13 @@ class HeaderSp {
 
   windowFix() {
     this.scrollTop = window.pageYOffset;
-    document.documentElement.style.overflowY = 'scroll';
-    document.body.style.position = 'fixed';
+    this.htmlEl.classList.add('--window-fixed');
     document.body.style.top = `-${this.scrollTop}px`;
-    document.body.style.left = 0;
-    document.body.style.right = 0;
   }
 
   windowClear() {
-    document.documentElement.style.overflowY = null;
-    document.body.style.position = null;
+    this.htmlEl.classList.remove('--window-fixed');
     document.body.style.top = null;
-    document.body.style.left = null;
-    document.body.style.right = null;
     window.scrollTo(0, this.scrollTop);
     this.scrollTop = 0;
   }

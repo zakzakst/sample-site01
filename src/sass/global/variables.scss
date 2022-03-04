@@ -8,6 +8,7 @@ $c_accent_dark: #d07011;
 $c_white: #fff;
 $c_black: #343434;
 $c_text: #343434;
+$c_bg_light: #ececec;
 
 // フォントファミリー
 $ff_default: 'Noto Sans JP', sans-serif;
@@ -18,6 +19,9 @@ $z_fixed: 100;
 
 // デュレーション
 $d_default: .5s;
+
+// 透明
+$op_default: .75;
 
 // 影
 $c_shadow_1: 0 4px 8px rgba(#000, 0.1);
@@ -38,7 +42,7 @@ $width_containers: (
   md: 720px,
   lg: 960px,
   xl: 1150px,
-  xxl: 1150px,
+  xxl: 1350px,
 );
 
 // スペース

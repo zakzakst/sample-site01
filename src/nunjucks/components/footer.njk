@@ -1,5 +1,54 @@
+{% set NAV_ITEMS = [
+  {
+    id: 'about',
+    link: '/about.html',
+    label: '○○○○について'
+  },
+  {
+    id: 'menu',
+    link: '/menu.html',
+    label: 'メニュー'
+  },
+  {
+    id: 'cafe',
+    link: '/cafe.html',
+    label: '店内設備'
+  },
+  {
+    id: 'news',
+    link: '/news.html',
+    label: 'お知らせ'
+  },
+  {
+    id: 'recruit',
+    link: '/recruit.html',
+    label: '採用情報'
+  }
+] %}
+
 <!-- ▼▼▼ フッター ▼▼▼ -->
 <footer id="js-footer" class="footer">
-  <p class="spacer">フッター</p>
+  <div class="footer__content-wrapper">
+    <div class="footer__content">
+      <div class="footer__content-map">
+        <iframe allowfullscreen="" aria-hidden="false" frameborder="0" height="300" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3238.0459159529737!2d139.80315461529614!3d35.74967618017841!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60188e4fa6644e8d%3A0x6bc4e612ab55d171!2z5YyX5Y2D5L2P6aeF!5e0!3m2!1sja!2sjp!4v1611569782550!5m2!1sja!2sjp" tabindex="0" width="100%"></iframe>
+      </div>
+      <div class="footer__content-info">
+      test
+      </div>
+    </div>
+  </div>
+  <div class="footer__bottom">
+    <div class="container">
+      <ul class="footer__nav-items">
+        {% for ITEM in NAV_ITEMS %}
+          <li class="footer__nav-item">
+            <a href="{{ ITEM.link }}"{{ CLASS | safe }}>{{ ITEM.label }}</a>
+          </li>
+        {% endfor %}
+      </ul>
+      <p class="footer__copy">Copyright &copy; XXXXX. All Rights Reserved.</p>
+    </div>
+  </div>
 </footer>
 <!-- ▲▲▲ フッター ▲▲▲ -->
