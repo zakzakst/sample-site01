@@ -14,7 +14,7 @@ const stylelint = require('stylelint');
 /**
  * 変数設定
  */
-const files = './src/sass/style.scss';
+const files = './src/sass/*.scss';
 const dist = './dist/css';
 const sassConf = {
   // outputStyle: 'compressed',
