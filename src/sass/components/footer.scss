@@ -1,3 +1,4 @@
+@use "sass:map";
 @use "../global" as g;
 
 $BLOCK_NAME: ".footer";
@@ -10,32 +11,90 @@ $BLOCK_NAME: ".footer";
   }
 
   &__content {
-    max-width: map-get(g.$width_containers, xxl);
-    height: 300px;
-    margin: 0 auto;
     display: flex;
+    flex-direction: column;
+    max-width: map.get(g.$width_containers, xxl);
+    margin: 0 auto;
+    @include g.Mq(md) {
+      flex-direction: row;
+    }
   }
 
   &__content-map {
-    width: 50%;
-    height: 100%;
-    border: none;
+    height: 300px;
     filter: grayscale(1);
+    border: none;
+    @include g.Mq(md) {
+      width: 50%;
+    }
   }
 
   &__content-info {
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
-    width: 50%;
-    height: 100%;
     padding: 24px;
     color: g.$c_white;
+    @include g.Mq(md) {
+      width: 50%;
+      height: 300px;
+    }
+  }
+
+  &__content-sns {
+    display: grid;
+    grid-template-columns: repeat(3, auto);
+    gap: 0 12px;
+    font-size: 14px;
+  }
+
+  &__content-sns-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 36px;
+    height: 36px;
+    color: g.$c_white;
+    border: 1px solid g.$c_white;
+    border-radius: 50%;
+    transition: all g.$d_default;
+    &:hover {
+      color: g.$c_primary;
+      background: g.$c_white;
+    }
+  }
+
+  &__content-table {
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+    margin-top: 16px;
+    font-size: 14px;
+    & dt {
+      position: relative;
+      display: block;
+      flex-shrink: 0;
+      padding-right: 24px;
+      &::after {
+        position: absolute;
+        top: 0;
+        right: 10px;
+        bottom: 0;
+        display: block;
+        width: 4px;
+        height: 2px;
+        margin: auto;
+        content: '';
+        background: g.$c_white;
+        border-radius: 9999px;
+        opacity: .5;
+      }
+    }
   }
 
   &__bottom {
-    font-size: 12px;
     padding: 16px 0;
+    font-size: 12px;
     background: g.$c_white;
   }
 

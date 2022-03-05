@@ -8,8 +8,9 @@
 }
 
 body {
-  font-size: 16px;
   font-family: g.$ff_default;
+  font-size: 16px;
+  font-weight: 300;
   line-height: 1.6;
 }
 
@@ -19,6 +20,6 @@ a {
 }
 
 button {
-  border: none;
   background: none;
+  border: none;
 }

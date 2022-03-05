@@ -80,7 +80,7 @@ html.--window-fixed {
   overflow-y: scroll;
   & body {
     position: fixed;
-    left: 0;
     right: 0;
+    left: 0;
   }
 }

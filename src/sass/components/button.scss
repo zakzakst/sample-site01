@@ -3,11 +3,11 @@
 $BLOCK_NAME: ".button";
 
 #{ $BLOCK_NAME } {
-  text-align: center;
   padding: 4px 24px 6px;
   color: g.$c_white;
-  transition: background-color g.$d_default;
+  text-align: center;
   cursor: pointer;
+  transition: background-color g.$d_default;
 
   &.--primary {
     background: g.$c_primary;
@@ -42,10 +42,10 @@ $BLOCK_NAME: ".button";
     }
     @at-root #{ $BLOCK_NAME }__icon {
       position: absolute;
-      display: block;
       top: 0;
       bottom: 0;
       left: 0;
+      display: block;
       width: 1em;
       margin: auto;
     }

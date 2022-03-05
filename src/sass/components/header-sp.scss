@@ -16,7 +16,8 @@ $BLOCK_NAME: ".header-sp";
   z-index: 1;
   display: flex;
   align-items: center;
-  padding: 8px 16px;
+  height: 56px;
+  padding: 0 16px;
   background: g.$c_white;
   box-shadow: g.$c_shadow_2;
 
@@ -27,20 +28,20 @@ $BLOCK_NAME: ".header-sp";
   &__button {
     position: relative;
     display: block;
-    margin-left: auto;
     width: 36px;
     height: 36px;
+    margin-left: auto;
     cursor: pointer;
     & > span {
       position: absolute;
       top: 0;
+      right: 0;
       bottom: 0;
       left: 0;
-      right: 0;
       display: block;
       height: 2px;
-      background: g.$c_black;
       margin: auto;
+      background: g.$c_black;
       transition: all g.$d_default;
       &:nth-child(2) {
         transform: translateY(12px);
@@ -65,8 +66,8 @@ $BLOCK_NAME: ".header-sp";
   &__menu {
     position: fixed;
     top: 0;
-    bottom: 0;
     right: 0;
+    bottom: 0;
     left: 0;
     visibility: hidden;
     transition-delay: g.$d_default;
@@ -77,18 +78,18 @@ $BLOCK_NAME: ".header-sp";
   }
 
   &__menu-content {
-    background: g.$c_white;
     position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 1;
     display: flex;
     flex-direction: column;
     width: 300px;
     padding: 80px 16px 16px;
-    top: 0;
-    bottom: 0;
-    right: 0;
-    z-index: 1;
-    transform: translateX(100%);
+    background: g.$c_white;
     transition: transform g.$d_default;
+    transform: translateX(100%);
     @at-root #{ $BLOCK_NAME }__menu.--open & {
       transform: translateX(0);
     }
@@ -111,9 +112,9 @@ $BLOCK_NAME: ".header-sp";
   &__menu-bg {
     position: absolute;
     top: 0;
+    right: 0;
     bottom: 0;
     left: 0;
-    right: 0;
     background: rgba(g.$c_black, 0.7);
     opacity: 0;
     transition: opacity g.$d_default;
