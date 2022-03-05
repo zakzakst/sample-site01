@@ -14,19 +14,19 @@ $BLOCK_NAME: ".link";
     bottom: 0;
     left: 6px;
     display: block;
-    margin: auto;
     width: 6px;
     height: 6px;
+    margin: auto;
     content: '';
     border-radius: 50%;
   }
   &::before {
-    background: g.$c_primary;
     z-index: 1;
+    background: g.$c_primary;
   }
   &::after {
-    opacity: 0;
     border: 0.5px solid g.$c_primary;
+    opacity: 0;
     transition: all g.$d_default;
   }
   &:hover {

@@ -11,6 +11,7 @@
   "rules": {
     "color-hex-case": "lower",
     "color-hex-length": "short",
+    "function-no-unknown": null,
     "no-duplicate-selectors": null,
     "no-empty-source": null,
     "no-descending-specificity": null

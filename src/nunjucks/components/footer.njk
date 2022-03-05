@@ -26,6 +26,36 @@
   }
 ] %}
 
+{% set SNS_ITEMS = [
+  {
+    href: '#',
+    icon: 'fab fa-facebook-f'
+  },
+  {
+    href: '#',
+    icon: 'fab fa-instagram'
+  },
+  {
+    href: '#',
+    icon: 'fab fa-twitter'
+  }
+] %}
+
+{% set TABLE_ITEMS = [
+  {
+    term: '所在地',
+    definition: '東京都○○区○○町 0-00-00'
+  },
+  {
+    term: 'TEL',
+    definition: '00-1234-5678'
+  },
+  {
+    term: 'MAIL',
+    definition: 'xxxx@co.jp'
+  }
+] %}
+
 <!-- ▼▼▼ フッター ▼▼▼ -->
 <footer id="js-footer" class="footer">
   <div class="footer__content-wrapper">
@@ -34,7 +64,21 @@
         <iframe allowfullscreen="" aria-hidden="false" frameborder="0" height="300" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3238.0459159529737!2d139.80315461529614!3d35.74967618017841!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60188e4fa6644e8d%3A0x6bc4e612ab55d171!2z5YyX5Y2D5L2P6aeF!5e0!3m2!1sja!2sjp!4v1611569782550!5m2!1sja!2sjp" tabindex="0" width="100%"></iframe>
       </div>
       <div class="footer__content-info">
-      test
+        <ul class="footer__content-sns">
+          {% for ITEM in SNS_ITEMS %}
+            <li>
+              <a href="{{ ITEM.href }}" class="footer__content-sns-link">
+                <i class="{{ ITEM.icon }}"></i>
+              </a>
+            </li>
+          {% endfor %}
+        </ul>
+        <dl class="footer__content-table">
+          {% for ITEM in TABLE_ITEMS %}
+            <dt>{{ ITEM.term }}</dt>
+            <dd>{{ ITEM.definition }}</dd>
+          {% endfor %}
+        </dl>
       </div>
     </div>
   </div>

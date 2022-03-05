@@ -12,9 +12,9 @@ $BLOCK_NAME: ".layout";
   &__main {
     position: relative;
     flex: 1 1 auto;
-    padding-top: 48px;
+    padding-top: 56px;
     @include g.Mq(lg) {
-      padding-top: 64px;
+      padding-top: 72px;
     }
   }
 }
