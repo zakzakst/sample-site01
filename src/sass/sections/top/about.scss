@@ -1,3 +1,7 @@
-.test {
+@use "../../global" as g;
+
+$BLOCK_NAME: ".top-about";
+
+#{ $BLOCK_NAME } {
   color: #000;
 }

@@ -1,33 +1,34 @@
+@use "sass:map";
 @use "../../global" as g;
 
-$BLOCK_NAME: ".hero";
+$BLOCK_NAME: ".top-hero";
 
 #{ $BLOCK_NAME } {
-  overflow: hidden;
-  background: g.$c_primary_bg;
   width: 100%;
   height: 450px;
+  overflow: hidden;
+  background: g.$c_primary_bg;
   @include g.Mq(sm) {
     height: 300px;
   }
   @include g.Mq(md) {
-    height: 400px;
+      height: calc(map.get(g.$width_containers, xxl) / 3);
   }
 
   &__imgs {
     position: absolute;
     top: 0;
-    left: 50%;
     right: 0;
+    left: 50%;
     display: flex;
     flex-wrap: wrap;
-    transform: translateX(-50%);
     width: 600px;
+    transform: translateX(-50%);
     @include g.Mq(sm) {
       width: 900px;
     }
     @include g.Mq(md) {
-      width: 1200px;
+      width: map.get(g.$width_containers, xxl);
     }
   }
 
@@ -58,33 +59,36 @@ $BLOCK_NAME: ".hero";
       }
     }
     @include g.Mq(md) {
-      width: 200px;
-      height: 200px;
+      width: calc(map.get(g.$width_containers, xxl) / 6);
+      height: calc(map.get(g.$width_containers, xxl) / 6);
     }
   }
 
   &__title {
     position: absolute;
     top: 0;
+    right: 0;
     bottom: 0;
     left: 0;
-    right: 0;
-    margin: auto;
+    z-index: 1;
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
-    z-index: 1;
-    flex-direction: column;
+    margin: auto;
   }
 
   &__title-line {
-    background: g.$c_primary_dark;
-    color: g.$c_white;
     padding: 4px 8px;
+    font-size: 16px;
+    color: g.$c_white;
+    background: g.$c_primary_dark;
     border-radius: 4px;
-    font-size: 20px;
     & + & {
       margin-top: 8px;
+    }
+    @include g.Mq(md) {
+      font-size: 20px;
     }
   }
 }
