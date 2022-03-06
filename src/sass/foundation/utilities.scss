@@ -44,6 +44,7 @@ $padding_names: (
 
 // コンテナ
 .container {
+  position: relative;
   @include g.container();
 }
 
