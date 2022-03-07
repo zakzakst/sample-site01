@@ -1,0 +1,61 @@
+@use "../global" as g;
+
+$BLOCK_NAME: ".circle-button";
+
+#{ $BLOCK_NAME } {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  height: 48px;
+  padding-left: 36px;
+  font-size: 14px;
+  font-weight: 400;
+
+  &__text {
+    z-index: 1;
+    transition: transform g.$d_default;
+    @at-root #{ $BLOCK_NAME }:hover & {
+      transform: translateX(5px);
+    }
+  }
+
+  &__circle {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: block;
+    width: 48px;
+    height: 48px;
+    content: '';
+    &::before,
+    &::after {
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      display: block;
+      margin: auto;
+      content: '';
+      border-radius: 50%;
+      transition: transform g.$d_default;
+    }
+    &::before {
+      background: g.$c_primary_light;
+      @at-root #{ $BLOCK_NAME }:hover & {
+        transform: scale(1.05);
+      }
+    }
+    &::after {
+      z-index: 1;
+      width: 16px;
+      height: 16px;
+      background: g.$c_white;
+      transform: scale(0);
+      @at-root #{ $BLOCK_NAME }:hover & {
+        transform: scale(1);
+      }
+    }
+  }
+}

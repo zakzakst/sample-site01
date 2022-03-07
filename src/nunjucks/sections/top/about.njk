@@ -1,7 +1,11 @@
 {%- import 'components/heading.njk' as HEADING -%}
+{%- import 'components/circle-button.njk' as CIRCLE_BUTTON -%}
 
 <!-- ▼▼▼ ○○○○について ▼▼▼ -->
 <div class="container">
   {{ HEADING.default('見出しが入ります') }}
+  <div class="text-center">
+    {{ CIRCLE_BUTTON.default('○○○○について', '/about.html') }}
+  </div>
 </div>
 <!-- ▲▲▲ ○○○○について ▲▲▲ -->
