@@ -1,3 +1,4 @@
+@use "sass:map";
 @use "../global" as g;
 
 // マージン・パディング
@@ -46,6 +47,11 @@ $padding_names: (
 .container {
   position: relative;
   @include g.container();
+  &.--single {
+    @include g.Mq(md) {
+      max-width: map.get(g.$width_containers, md);
+    }
+  }
 }
 
 // グリッド
