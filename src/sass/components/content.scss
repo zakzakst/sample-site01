@@ -1,0 +1,12 @@
+@use "../global" as g;
+
+$BLOCK_NAME: ".content";
+
+#{ $BLOCK_NAME } {
+  & p {
+    font-size: 14px;
+    &:not(:first-child) {
+      margin-top: 8px;
+    }
+  }
+}

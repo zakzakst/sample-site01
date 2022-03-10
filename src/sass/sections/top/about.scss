@@ -3,5 +3,42 @@
 $BLOCK_NAME: ".top-about";
 
 #{ $BLOCK_NAME } {
-  color: #000;
+  &__imgs {
+    display: flex;
+    justify-content: center;
+    padding: 32px 0;
+    @include g.Mq(sm) {
+      padding: 48px 0;
+    }
+  }
+
+  &__img {
+    width: 50%;
+    max-width: 300px;
+    aspect-ratio: 1 / 1;
+    background: g.$c_white;
+    border: 4px solid g.$c_white;
+    border-radius: 4px;
+    box-shadow: g.$c_shadow_2;
+    @include g.Mq(sm) {
+      border-width: 8px;
+    }
+    &:first-child {
+      transform: translate(20px, -24px) rotate(-10deg);
+      @include g.Mq(sm) {
+        transform: translate(32px, -24px) rotate(-10deg);
+      }
+    }
+    &:last-child {
+      transform: translate(-20px, 24px) rotate(5deg);
+      @include g.Mq(sm) {
+        transform: translate(-28px, 24px) rotate(5deg);
+      }
+    }
+    & > img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
 }
