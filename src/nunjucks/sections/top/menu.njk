@@ -1,1 +1,25 @@
-<div>メニュー</div>
+{%- import 'components/circle-button.njk' as CIRCLE_BUTTON -%}
+
+<!-- ▼▼▼ メニュー ▼▼▼ -->
+<div class="top-menu">
+  <div class="container --single">
+    <div class="row">
+      <div class="col-md-6">
+        <h2 class="top-menu__heading">見出しが入ります</h2>
+        <div class="content mt-2">
+          <p>テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。</p>
+          <p>テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。</p>
+          <div class="text-center text-md-left mt-2">
+            {{ CIRCLE_BUTTON.default('メニュー', '/menu.html', ' --light') }}
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="top-menu__img">
+          <img src="https://picsum.photos/id/239/450/450" alt="">
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- ▲▲▲ メニュー ▲▲▲ -->

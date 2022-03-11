@@ -9,6 +9,7 @@ $c_accent: #ee8b26;
 $c_accent_dark: #d07011;
 $c_white: #fff;
 $c_black: #343434;
+$c_gray: #888888;
 $c_text: #343434;
 $c_bg_light: #ececec;
 
@@ -28,6 +29,9 @@ $op_default: .75;
 // 影
 $c_shadow_1: 0 4px 8px rgba(#000, 0.1);
 $c_shadow_2: 0 4px 8px rgba(#000, 0.2);
+
+// 角丸
+$c_radius_default: 4px;
 
 // ブレークポイント
 $break_points: (
