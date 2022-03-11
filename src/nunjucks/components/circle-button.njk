@@ -1,5 +1,5 @@
-{% macro default(TEXT, LINK) %}
-<a href="{{ LINK }}" class="circle-button">
+{% macro default(TEXT, LINK, CLASS) %}
+<a href="{{ LINK }}" class="circle-button{{ CLASS }}">
   <span class="circle-button__text">{{ TEXT }}</span>
   <span class="circle-button__circle"></span>
 </a>

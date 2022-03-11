@@ -75,6 +75,7 @@ $grid_gap: 16px;
   // デバイスサイズの指定あり
   @each $break_point_key, $break_point in g.$break_points {
     .col-#{$break_point_key}-#{$i} {
+      width: 100%;
       @media screen and (min-width: #{$break_point}) {
         width: calc(100% / 12 * $i);
       }
@@ -93,6 +94,17 @@ html.--window-fixed {
 }
 
 // テキスト
-.text-center {
-  text-align: center !important;
+$align_names: left, right, center;
+
+@each $align_name in $align_names {
+  .text-#{$align_name} {
+    text-align: #{$align_name} !important;
+  }
+  @each $break_point_key, $break_point in g.$break_points {
+    .text-#{$break_point_key}-#{$align_name} {
+      @media screen and (min-width: #{$break_point}) {
+        text-align: #{$align_name} !important;
+      }
+    }
+  }
 }
