@@ -15,7 +15,7 @@ $BLOCK_NAME: ".circle-button";
   &__text {
     z-index: 1;
     transition: transform g.$d_default;
-    font-weight: bold;
+    // font-weight: bold;
     @at-root #{ $BLOCK_NAME }:hover & {
       transform: translateX(5px);
     }
