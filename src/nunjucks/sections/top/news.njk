@@ -1,1 +1,11 @@
-<div>お知らせ</div>
+{%- import 'components/heading.njk' as HEADING -%}
+{%- import 'components/circle-button.njk' as CIRCLE_BUTTON -%}
+
+<!-- ▼▼▼ お知らせ ▼▼▼ -->
+<div class="container --single pt-5 pb-5">
+  {{ HEADING.default('お知らせ') }}
+  <div class="text-center mt-3">
+    {{ CIRCLE_BUTTON.default('お知らせ一覧', '/news.html') }}
+  </div>
+</div>
+<!-- ▲▲▲ お知らせ ▲▲▲ -->
