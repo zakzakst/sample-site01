@@ -5,16 +5,16 @@ $BLOCK_NAME: ".top-menu";
 #{ $BLOCK_NAME } {
   position: relative;
   padding: 48px 0;
-  background: g.$c_primary;
   color: g.$c_white;
+  background: g.$c_primary;
   &::before,
   &::after {
     position: absolute;
-    left: 0;
     right: 0;
-    content: '';
+    left: 0;
     display: block;
     height: 12px;
+    content: '';
     background-image: radial-gradient(circle at center, g.$c_white 20%, transparent 20%);
     background-size: 12px 12px;
   }
@@ -30,8 +30,8 @@ $BLOCK_NAME: ".top-menu";
   }
 
   &__heading {
-    text-align: center;
     font-weight: bold;
+    text-align: center;
     @include g.Mq(md) {
       text-align: left;
     }
@@ -41,11 +41,11 @@ $BLOCK_NAME: ".top-menu";
     width: 100%;
     max-width: 320px;
     aspect-ratio: 1 / 1;
-    border-radius: g.$c_radius_default;
     margin: 0 auto;
     overflow: hidden;
     background: g.$c_gray;
-    box-shadow: g.$c_shadow_2;
+    border-radius: g.$radius_default;
+    box-shadow: g.$shadow_1;
     @include g.Mq(md) {
       max-width: none;
     }

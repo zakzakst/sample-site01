@@ -1,0 +1,88 @@
+@use "../global" as g;
+
+$BLOCK_NAME: ".news-list";
+
+#{ $BLOCK_NAME } {
+  font-size: 14px;
+
+  &__item {
+    border-bottom: 1px dotted g.$c_border;
+    &:first-child {
+      border-top: 1px dotted g.$c_border;
+    }
+  }
+
+  &__link {
+    position: relative;
+    display: block;
+    padding: 12px 48px 12px 0;
+  }
+
+  &__info {
+    display: flex;
+    align-items: center;
+    width: 100%;
+  }
+
+  &__date {
+    display: inline-block;
+    flex-shrink: 0;
+    width: 64px;
+    font-size: 12px;
+  }
+
+  &__category {
+    display: inline-block;
+    padding: 2px 8px;
+    font-size: 10px;
+    color: g.$c_white;
+    background: g.$c_gray;
+    border-radius: g.$radius_default;
+  }
+
+  &__text {
+    display: block;
+    margin-top: 4px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    transition: g.$d_default;
+    @at-root #{ $BLOCK_NAME }__link:hover & {
+      color: g.$c_primary;
+    }
+  }
+
+  &__icon {
+    position: absolute;
+    top: 0;
+    right: 4px;
+    bottom: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 16px;
+    height: 16px;
+    margin: auto;
+    font-size: 12px;
+    color: g.$c_white;
+    background: g.$c_primary;
+    border-radius: 50%;
+    &::after {
+      position: absolute;
+      top: -4px;
+      right: -4px;
+      bottom: -4px;
+      left: -4px;
+      content: '';
+      border: 2px solid g.$c_primary;
+      border-radius: 50%;
+      opacity: 0;
+      transition: g.$d_default;
+      transform: scale(0);
+      @at-root #{ $BLOCK_NAME }__link:hover & {
+        opacity: 1;
+        transform: scale(1);
+      }
+    }
+  }
+}

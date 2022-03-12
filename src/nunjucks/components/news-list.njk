@@ -1,0 +1,20 @@
+{% macro default(ITEMS) %}
+<!-- ▼▼▼ ニュース一覧 ▼▼▼ -->
+<ul class="news-list">
+  {% for ITEM in ITEMS %}
+    <li class="news-list__item">
+      <a href="{{ ITEM.LINK }}" class="news-list__link">
+        <span class="news-list__info">
+          <span class="news-list__date">{{ ITEM.DATE }}</span>
+          <span class="news-list__category">{{ ITEM.CATEGORY }}</span>
+        </span>
+        <span class="news-list__text">{{ ITEM.TEXT }}</span>
+        <span class="news-list__icon">
+          <i class="fas fa-angle-right"></i>
+        </span>
+      </a>
+    </li>
+  {% endfor %}
+</ul>
+<!-- ▲▲▲ ニュース一覧 ▲▲▲ -->
+{% endmacro %}
