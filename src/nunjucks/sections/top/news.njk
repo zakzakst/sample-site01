@@ -1,9 +1,32 @@
 {%- import 'components/heading.njk' as HEADING -%}
+{%- import 'components/news-list.njk' as NEWS_LIST -%}
 {%- import 'components/circle-button.njk' as CIRCLE_BUTTON -%}
+
+{% set NEWS_LIST_ITEMS = [
+  {
+    LINK: '#',
+    DATE: '2022.01.03',
+    CATEGORY: 'お知らせ',
+    TEXT: 'テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。'
+  },
+  {
+    LINK: '#',
+    DATE: '2022.01.02',
+    CATEGORY: 'イベント',
+    TEXT: 'テキストが入ります。テキストが入ります。テキストが入ります。'
+  },
+  {
+    LINK: '#',
+    DATE: '2022.01.01',
+    CATEGORY: 'お知らせ',
+    TEXT: 'テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。'
+  }
+] %}
 
 <!-- ▼▼▼ お知らせ ▼▼▼ -->
 <div class="container --single pt-5 pb-5">
   {{ HEADING.default('お知らせ') }}
+  {{ NEWS_LIST.default(NEWS_LIST_ITEMS) }}
   <div class="text-center mt-3">
     {{ CIRCLE_BUTTON.default('お知らせ一覧', '/news.html') }}
   </div>

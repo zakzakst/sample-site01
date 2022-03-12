@@ -19,7 +19,7 @@ $BLOCK_NAME: ".top-about";
     background: g.$c_white;
     border: 4px solid g.$c_white;
     border-radius: 4px;
-    box-shadow: g.$c_shadow_2;
+    box-shadow: g.$shadow_1;
     @include g.Mq(sm) {
       border-width: 8px;
     }

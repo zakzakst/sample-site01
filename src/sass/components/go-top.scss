@@ -30,7 +30,7 @@ $BLOCK_NAME: ".go-top";
     cursor: pointer;
     background: g.$c_accent;
     border-radius: 50%;
-    box-shadow: g.$c_shadow_1;
+    box-shadow: g.$shadow_1;
     opacity: 0;
     transition: background-color g.$d_default, opacity g.$d_default;
     &:hover {
