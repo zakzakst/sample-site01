@@ -1,0 +1,23 @@
+@use "../global" as g;
+
+$BLOCK_NAME: ".recruit-bnr";
+
+#{ $BLOCK_NAME } {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 200px;
+  background: g.$c_primary;
+  border-radius: g.$radius_default;
+
+  &__heading {
+    font-weight: bold;
+    color: g.$c_white;
+  }
+
+  &__button {
+    margin-top: 12px;
+    text-align: center;
+  }
+}

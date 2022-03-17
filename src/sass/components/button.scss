@@ -7,7 +7,7 @@ $BLOCK_NAME: ".button";
   color: g.$c_white;
   text-align: center;
   cursor: pointer;
-  transition: background-color g.$d_default;
+  transition: all g.$d_default;
 
   &.--primary {
     background: g.$c_primary;
@@ -27,6 +27,15 @@ $BLOCK_NAME: ".button";
     background: g.$c_accent;
     &:hover {
       background-color: g.$c_accent_dark;
+    }
+  }
+
+  &.--white {
+    color: g.$c_secondary;
+    background: g.$c_white;
+    &:hover {
+      color: g.$c_white;
+      background-color: g.$c_accent;
     }
   }
 
