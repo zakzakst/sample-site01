@@ -29,10 +29,15 @@
 
 {# ▼▼▼ コンポーネント読み込み ▼▼▼ #}
 {% from 'components/breadcrumb.njk' import default as BREADCRUMB %}
+{% from 'components/hero.njk' import default as HERO %}
 {% from 'components/modal.njk' import default as MODAL %}
 {# ▲▲▲ コンポーネント読み込み ▲▲▲ #}
 
 {% block PAGE_CONTENT %}
+  {# ▼▼▼ ヒーロー ▼▼▼ #}
+  {{ HERO('パーツ集', 'PARTS', 'https://picsum.photos/id/1015/1200/200') }}
+  {# ▲▲▲ ヒーロー ▲▲▲ #}
+
   {# ▼▼▼ パンくず ▼▼▼ #}
   {{ BREADCRUMB(PAGE_DATA.BREADCRUMB_ITEMS) }}
   {# ▲▲▲ パンくず ▲▲▲ #}
