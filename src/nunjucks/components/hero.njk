@@ -1,0 +1,15 @@
+{% macro default(TITLE, SUB_TITLE, IMAGE) %}
+<!-- ▼▼▼ ヒーロー ▼▼▼ -->
+<div class="hero">
+  <div class="hero__text">
+    <div class="container">
+      <h1 class="hero__title">{{ TITLE }}</h1>
+      <p class="hero__sub-title">{{ SUB_TITLE }}</p>
+    </div>
+  </div>
+  <div class="hero__bg">
+    <img src="{{ IMAGE }}" alt="">
+  </div>
+</div>
+<!-- ▲▲▲ ヒーロー ▲▲▲ -->
+{% endmacro %}
