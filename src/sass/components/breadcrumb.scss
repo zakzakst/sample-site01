@@ -1,0 +1,45 @@
+@use "../global" as g;
+
+$BLOCK_NAME: ".breadcrumb";
+
+#{ $BLOCK_NAME } {
+  background: g.$c_bg_light;
+  padding: 8px 0;
+
+  &__items {
+    font-size: 14px;
+  }
+  
+  &__item {
+    display: inline-block;
+    &:nth-child(n + 2) {
+      position: relative;
+      padding-left: 36px;
+      &::after {
+        position: absolute;
+        display: block;
+        top: 0;
+        bottom: 0;
+        left: 16px;
+        content: '';
+        width: 0;
+        height: 0;
+        margin: auto;
+        border: solid transparent;
+        border-width: 4px 6px;
+        border-left-color: g.$c_text;
+        box-sizing: content-box;
+      }
+    }
+  }
+
+  &__link {
+    transition: color g.$d_default;
+    &.--active {
+      text-decoration: underline;
+    }
+    &:hover {
+      color: g.$c_primary_dark;
+    }
+  }
+}
