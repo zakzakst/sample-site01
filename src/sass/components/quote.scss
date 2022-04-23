@@ -1,0 +1,20 @@
+@use "../global" as g;
+
+$BLOCK_NAME: ".quote";
+
+#{ $BLOCK_NAME } {
+  position: relative;
+  padding: 16px 56px;
+  margin-top: 8px;
+  font-size: 12px;
+  background: g.$c_bg_light;
+  border-radius: g.$radius_default;
+
+  &__icon {
+    position: absolute;
+    top: -8px;
+    left: 12px;
+    font-size: 32px;
+    color: g.$c_gray;
+  }
+}
