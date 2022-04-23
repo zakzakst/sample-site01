@@ -31,6 +31,7 @@
 {% from 'components/breadcrumb.njk' import default as BREADCRUMB %}
 {% from 'components/hero.njk' import default as HERO %}
 {% from 'components/modal.njk' import default as MODAL %}
+{% from 'components/quote.njk' import default as QUOTE %}
 {# ▲▲▲ コンポーネント読み込み ▲▲▲ #}
 
 {% block PAGE_CONTENT %}
@@ -41,6 +42,14 @@
   {# ▼▼▼ パンくず ▼▼▼ #}
   {{ BREADCRUMB(PAGE_DATA.BREADCRUMB_ITEMS) }}
   {# ▲▲▲ パンくず ▲▲▲ #}
+  
+  <div class="container --single pt-5 pb-5">
+    {% call QUOTE() %}
+      <p>テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。</p>
+      <p>テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。</p>
+      <p>テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。</p>
+    {% endcall %}
+  </div>
 
   {# ▼▼▼ モーダル ▼▼▼ #}
   {% call MODAL('modal') %}
