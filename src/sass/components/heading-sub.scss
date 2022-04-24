@@ -3,9 +3,9 @@
 $BLOCK_NAME: ".heading-sub";
 
 #{ $BLOCK_NAME } {
-  text-align: center;
   overflow: hidden;
   font-weight: bold;
+  text-align: center;
 
   &__text {
     position: relative;
@@ -20,8 +20,8 @@ $BLOCK_NAME: ".heading-sub";
       width: 50vw;
       height: 1px;
       margin: auto;
-      background: g.$c_primary;
       content: '';
+      background: g.$c_primary;
     }
     &::before {
       right: 100%;

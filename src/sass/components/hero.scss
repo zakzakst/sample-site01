@@ -4,15 +4,15 @@ $BLOCK_NAME: ".hero";
 
 #{ $BLOCK_NAME } {
   position: relative;
-  height: 200px;
   display: flex;
   align-items: center;
+  height: 200px;
 
   &__text {
     position: relative;
     z-index: 1;
-    color: g.$c_white;
     width: 100%;
+    color: g.$c_white;
     text-align: center;
   }
 
@@ -24,9 +24,9 @@ $BLOCK_NAME: ".hero";
   &__bg {
     position: absolute;
     top: 0;
+    right: 0;
     bottom: 0;
     left: 0;
-    right: 0;
     & > img {
       object-fit: cover;
       width: 100%;
@@ -34,11 +34,11 @@ $BLOCK_NAME: ".hero";
     }
     &::after {
       position: absolute;
-      content: '';
       top: 0;
+      right: 0;
       bottom: 0;
       left: 0;
-      right: 0;
+      content: '';
       background: rgba(g.$c_black, .7);
     }
   }

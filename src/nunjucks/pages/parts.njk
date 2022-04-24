@@ -45,8 +45,36 @@
   {# ▲▲▲ パンくず ▲▲▲ #}
   
   <div class="container --single pt-5 pb-5">
+    {# ▼▼▼ 見出し ▼▼▼ #}
     {{ HEADING.default('大見出し') }}
     {{ HEADING.sub('中見出し') }}
+    {# ▲▲▲ 見出し ▲▲▲ #}
+
+    {# ▼▼▼ ボタン ▼▼▼ #}
+    <div class="button__container">
+      <a href="#" class="button --primary">ボタン</a>
+      <a href="#" class="button --secondary">ボタン</a>
+      <a href="#" class="button --accent">ボタン</a>
+      <a href="#" class="button --primary --rounded">角丸ボタン</a>
+      <a href="#" class="button --secondary --rounded">角丸ボタン</a>
+      <a href="#" class="button --accent --rounded">角丸ボタン</a>
+      <a href="#" class="button --primary --has-icon">
+        <span><i class="fas fa-envelope button__icon"></i>アイコンボタン</span>
+      </a>
+      <a href="#" class="button --secondary --has-icon">
+        <span><i class="fas fa-angle-down button__icon"></i>アイコンボタン</span>
+      </a>
+      <a href="#" class="button --accent --has-icon">
+        <span><i class="fas fa-bookmark button__icon"></i>アイコンボタン</span>
+      </a>
+      <a href="#" class="button --white">白ボタン</a>
+      <a href="#" class="button --white --rounded">角丸白ボタン</a>
+      <a href="#" class="button --white --has-icon">
+        <span><i class="fas fa-info-circle button__icon"></i>アイコン白ボタン</span>
+      </a>
+    </div>
+    {# ▲▲▲ ボタン ▲▲▲ #}
+
     {# ▼▼▼ 引用 ▼▼▼ #}
     {% call QUOTE() %}
       <p>テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。</p>

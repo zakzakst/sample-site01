@@ -3,8 +3,8 @@
 $BLOCK_NAME: ".breadcrumb";
 
 #{ $BLOCK_NAME } {
-  background: g.$c_bg_light;
   padding: 8px 0;
+  background: g.$c_bg_light;
 
   &__items {
     font-size: 14px;
@@ -17,18 +17,18 @@ $BLOCK_NAME: ".breadcrumb";
       padding-left: 36px;
       &::after {
         position: absolute;
-        display: block;
         top: 0;
         bottom: 0;
         left: 16px;
-        content: '';
+        box-sizing: content-box;
+        display: block;
         width: 0;
         height: 0;
         margin: auto;
+        content: '';
         border: solid transparent;
         border-width: 4px 6px;
         border-left-color: g.$c_text;
-        box-sizing: content-box;
       }
     }
   }
