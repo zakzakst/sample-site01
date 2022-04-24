@@ -1,0 +1,8 @@
+{% macro default(HEADING = '注意事項') %}
+<!-- ▼▼▼ 注意事項 ▼▼▼ -->
+<div class="caution">
+  <h3 class="caution__heading">{{ HEADING }}</h3>
+  {{ caller() }}
+</div>
+<!-- ▲▲▲ 注意事項 ▲▲▲ -->
+{% endmacro %}
