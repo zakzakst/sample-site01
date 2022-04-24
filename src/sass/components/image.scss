@@ -1,0 +1,17 @@
+@use "../global" as g;
+
+$BLOCK_NAME: ".image";
+
+#{ $BLOCK_NAME } {
+  max-width: 360px;
+  margin: 0 auto;
+  overflow: hidden;
+  border-radius: g.$radius_default;
+  &.--full {
+    max-width: none;
+    width: 100%;
+  }
+  & > img {
+    width: 100%;
+  }
+}
