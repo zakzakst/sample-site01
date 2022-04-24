@@ -27,12 +27,34 @@
   ]
 } %}
 
+{% set NEWS_LIST_ITEMS = [
+  {
+    LINK: '#',
+    DATE: '2022.01.03',
+    CATEGORY: 'お知らせ',
+    TEXT: 'テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。'
+  },
+  {
+    LINK: '#',
+    DATE: '2022.01.02',
+    CATEGORY: 'イベント',
+    TEXT: 'テキストが入ります。テキストが入ります。テキストが入ります。'
+  },
+  {
+    LINK: '#',
+    DATE: '2022.01.01',
+    CATEGORY: 'お知らせ',
+    TEXT: 'テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。'
+  }
+] %}
+
 {# ▼▼▼ コンポーネント読み込み ▼▼▼ #}
 {% from 'components/breadcrumb.njk' import default as BREADCRUMB %}
 {% import 'components/heading.njk' as HEADING %}
 {% from 'components/hero.njk' import default as HERO %}
 {% from 'components/modal.njk' import default as MODAL %}
 {% from 'components/quote.njk' import default as QUOTE %}
+{% from 'components/news-list.njk' import default as NEWS_LIST -%}
 {# ▲▲▲ コンポーネント読み込み ▲▲▲ #}
 
 {% block PAGE_CONTENT %}
@@ -74,6 +96,10 @@
       </a>
     </div>
     {# ▲▲▲ ボタン ▲▲▲ #}
+
+    {# ▼▼▼ お知らせ ▼▼▼ #}
+    {{ NEWS_LIST(NEWS_LIST_ITEMS) }}
+    {# ▲▲▲ お知らせ ▲▲▲ #}
 
     {# ▼▼▼ 引用 ▼▼▼ #}
     {% call QUOTE() %}
