@@ -8,8 +8,8 @@ $BLOCK_NAME: ".image";
   overflow: hidden;
   border-radius: g.$radius_default;
   &.--full {
-    max-width: none;
     width: 100%;
+    max-width: none;
   }
   & > img {
     width: 100%;

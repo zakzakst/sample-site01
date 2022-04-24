@@ -3,9 +3,9 @@
 $BLOCK_NAME: ".table";
 
 #{ $BLOCK_NAME } {
-  table-layout: fixed;
   width: 100%;
   font-size: 14px;
+  table-layout: fixed;
 
   &__row {
     display: block;
@@ -18,14 +18,14 @@ $BLOCK_NAME: ".table";
 
   &__header {
     display: block;
-    text-align: left;
-    font-weight: bold;
     padding-bottom: 4px;
+    font-weight: bold;
+    text-align: left;
     @include g.Mq(md) {
       display: table-cell;
-      text-align: right;
       width: 120px;
       padding: 0 8px 0 0;
+      text-align: right;
     }
   }
 

@@ -11,13 +11,13 @@ $BLOCK_NAME: ".caution";
 
   &__heading {
     position: absolute;
-    display: inline-block;
     top: -12px;
     right: 0;
     left: 0;
+    display: inline-block;
     margin: auto;
-    text-align: center;
     font-weight: bold;
     color: g.$c_caution;
+    text-align: center;
   }
 }
