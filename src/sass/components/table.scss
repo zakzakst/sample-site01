@@ -1,0 +1,38 @@
+@use "../global" as g;
+
+$BLOCK_NAME: ".table";
+
+#{ $BLOCK_NAME } {
+  table-layout: fixed;
+  width: 100%;
+  font-size: 14px;
+
+  &__row {
+    display: block;
+    padding: 8px 0;
+    border-bottom: 1px dotted g.$c_border;
+    &:first-child {
+      border-top: 1px dotted g.$c_border;
+    }
+  }
+
+  &__header {
+    display: block;
+    text-align: left;
+    font-weight: bold;
+    padding-bottom: 4px;
+    @include g.Mq(md) {
+      display: table-cell;
+      text-align: right;
+      width: 120px;
+      padding: 0 8px 0 0;
+    }
+  }
+
+  &__data {
+    display: block;
+    @include g.Mq(md) {
+      display: table-cell;
+    }
+  }
+}
