@@ -1,0 +1,18 @@
+{% macro default(ITEMS) %}
+<!-- ▼▼▼ カード ▼▼▼ -->
+<div class="row">
+  {% for ITEM in ITEMS %}
+    <div class="col-sm-6 col-md-4">
+      <div class="card">
+        <div class="card__img">
+          <img src="{{ ITEM.img }}" alt="">
+        </div>
+        <h3 class="card__name">{{ ITEM.name | safe }}</h3>
+        <p class="card__text">{{ ITEM.text }}</p>
+        <p class="card__price">{{ ITEM.price }}円</p>
+      </div>
+    </div>
+  {% endfor %}
+</div>
+<!-- ▲▲▲ カード ▲▲▲ -->
+{% endmacro %}

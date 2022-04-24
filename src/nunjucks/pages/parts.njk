@@ -63,8 +63,48 @@
   }
 ] %}
 
+{% set CARD_ITEMS = [
+  {
+    img: 'https://picsum.photos/id/1015/400/200',
+    name: '商品名',
+    text: 'テキストが入ります。',
+    price: 980
+  },
+  {
+    img: 'https://picsum.photos/id/1015/400/200',
+    name: '商品名',
+    text: 'テキストが入ります。テキストが入ります。',
+    price: 980
+  },
+  {
+    img: 'https://picsum.photos/id/1015/400/200',
+    name: '商品名',
+    text: 'テキストが入ります。テキストが入ります。',
+    price: 980
+  },
+  {
+    img: 'https://picsum.photos/id/1015/400/200',
+    name: '商品名',
+    text: 'テキストが入ります。テキストが入ります。',
+    price: 980
+  },
+  {
+    img: 'https://picsum.photos/id/1015/400/200',
+    name: '商品名',
+    text: 'テキストが入ります。',
+    price: 980
+  },
+  {
+    img: 'https://picsum.photos/id/1015/400/200',
+    name: '商品名',
+    text: 'テキストが入ります。テキストが入ります。',
+    price: 980
+  }
+] %}
+
 {# ▼▼▼ コンポーネント読み込み ▼▼▼ #}
 {% from 'components/breadcrumb.njk' import default as BREADCRUMB %}
+{% from 'components/cards.njk' import default as CARDS %}
 {% from 'components/caution.njk' import default as CAUTION %}
 {% import 'components/heading.njk' as HEADING %}
 {% from 'components/hero.njk' import default as HERO %}
@@ -146,6 +186,10 @@
       <img src="https://picsum.photos/id/1015/1200/200" alt="">
     </div>
     {# ▲▲▲ 画像 ▲▲▲ #}
+
+    {# ▼▼▼ カード ▼▼▼ #}
+    {{ CARDS(CARD_ITEMS) }}
+    {# ▲▲▲ カード ▲▲▲ #}
   </div>
 
   {# ▼▼▼ モーダル ▼▼▼ #}
