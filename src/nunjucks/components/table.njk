@@ -1,0 +1,14 @@
+{% macro default(ITEMS) %}
+<!-- ▼▼▼ テーブル ▼▼▼ -->
+<table class="table">
+  <tbody>
+    {% for ITEM in ITEMS %}
+      <tr class="table__row">
+        <th class="table__header">{{ ITEM.header }}</th>
+        <td class="table__data">{{ ITEM.data | safe }}</td>
+      </tr>
+    {% endfor %}
+  </tbody>
+</table>
+<!-- ▲▲▲ テーブル ▲▲▲ -->
+{% endmacro %}
