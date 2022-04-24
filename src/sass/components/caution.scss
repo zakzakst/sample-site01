@@ -1,0 +1,23 @@
+@use "../global" as g;
+
+$BLOCK_NAME: ".caution";
+
+#{ $BLOCK_NAME } {
+  position: relative;
+  padding: 20px 16px 16px;
+  margin-top: 12px;
+  background-color: g.$c_caution_bg;
+  border-radius: g.$radius_default;
+
+  &__heading {
+    position: absolute;
+    display: inline-block;
+    top: -12px;
+    right: 0;
+    left: 0;
+    margin: auto;
+    text-align: center;
+    font-weight: bold;
+    color: g.$c_caution;
+  }
+}
