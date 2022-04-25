@@ -11,7 +11,7 @@ class GoTop {
   constructor() {
     this.htmlEl = document.documentElement;
     this.el = document.getElementById('js-go-top');
-    this.mainEl = document.getElementById('js-layout-main');
+    this.contentEl = document.getElementById('js-layout-content');
     this.footerEl = document.getElementById('js-footer');
     this.showOffset = 200;
     this.fixBottomOffset = 32;
@@ -25,7 +25,7 @@ class GoTop {
 
   elShow() {
     ScrollTrigger.create({
-      trigger: this.mainEl,
+      trigger: this.contentEl,
       start: `top -${this.showOffset}px`,
       onEnter: () => {
         if (this.htmlEl.classList.contains('--window-fixed')) return;

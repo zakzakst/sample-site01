@@ -36,4 +36,7 @@ $BLOCK_NAME: ".link";
       transform: scale(2);
     }
   }
+  &.--current {
+    color: g.$c_primary;
+  }
 }

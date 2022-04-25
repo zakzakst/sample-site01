@@ -35,5 +35,5 @@
 {%- import './sp.njk' as HEADER_SP -%}
 
 
-{{ HEADER_PC.default(NAV_ITEMS) }}
-{{ HEADER_SP.default(NAV_ITEMS) }}
+{{ HEADER_PC.default(NAV_ITEMS, PAGE_DATA) }}
+{{ HEADER_SP.default(NAV_ITEMS, PAGE_DATA) }}

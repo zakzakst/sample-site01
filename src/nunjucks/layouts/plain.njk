@@ -21,14 +21,10 @@
 
   <!-- ▼▼▼ ページ内容 ▼▼▼ -->
   <div id="js-layout-content" class="layout__content">
-    {% block HERO_CONTENT %}
-    {% endblock %}
-    <div class="container --single pt-5 pb-5">
-      <main>
-        {% block PAGE_CONTENT %}
-        {% endblock %}
-      </main>
-    </div>
+    <main>
+      {% block PAGE_CONTENT %}
+      {% endblock %}
+    </main>
     {# ▼▼▼ トップへ戻る ▼▼▼ #}
     {% include '../components/go-top.njk' %}
     {# ▲▲▲ トップへ戻る ▲▲▲ #}

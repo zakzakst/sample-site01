@@ -9,12 +9,36 @@ $BLOCK_NAME: ".layout";
     min-height: 100vh;
   }
 
-  &__main {
+  &__content {
     position: relative;
     flex: 1 1 auto;
     padding-top: 56px;
     @include g.Mq(lg) {
       padding-top: 72px;
+    }
+  }
+
+  &__container.--has-aside {
+    display: flex;
+    flex-direction: column;
+    @include g.Mq(lg) {
+      flex-direction: row;
+    }
+  }
+
+  &__aside {
+    margin-top: 36px;
+    @include g.Mq(lg) {
+      width: 240px;
+      flex-shrink: 0;
+      margin: 0 0 0 36px;
+    }
+  }
+
+  &__aside-content {
+    @include g.Mq(lg) {
+      position: sticky;
+      top: 90px;
     }
   }
 }
