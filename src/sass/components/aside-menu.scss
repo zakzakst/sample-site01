@@ -1,0 +1,37 @@
+@use "../global" as g;
+
+$BLOCK_NAME: ".aside-menu";
+
+#{ $BLOCK_NAME } {
+  &__item {
+    border-bottom: 1px solid g.$c_border;
+    &:first-child {
+      border-top: 1px solid g.$c_border;
+    }
+  }
+
+  &__link {
+    position: relative;
+    display: block;
+    padding: 8px 8px 8px 36px;
+    transition: color g.$d_default;
+    &::after {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 16px;
+      box-sizing: content-box;
+      display: block;
+      width: 0;
+      height: 0;
+      margin: auto;
+      content: '';
+      border: solid transparent;
+      border-width: 4px 6px;
+      border-left-color: g.$c_text;
+    }
+    &:hover {
+      color: g.$c_primary;
+    }
+  }
+}

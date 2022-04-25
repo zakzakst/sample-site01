@@ -42,7 +42,23 @@
   }
 ] %}
 
+{% set ASIDE_MENU_ITEMS = [
+  {
+    label: 'サイドメニュー1',
+    link: '#'
+  },
+  {
+    label: 'サイドメニュー2',
+    link: '#'
+  },
+  {
+    label: 'サイドメニュー3',
+    link: '#'
+  }
+] %}
+
 {# ▼▼▼ コンポーネント読み込み ▼▼▼ #}
+{% from 'components/aside-menu.njk' import default as ASIDE_MENU %}
 {% from 'components/breadcrumb.njk' import default as BREADCRUMB %}
 {% import 'components/heading.njk' as HEADING %}
 {% from 'components/hero.njk' import default as HERO %}
@@ -71,7 +87,9 @@
 {% endblock %}
 
 {% block ASIDE_CONTENT %}
-テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。
+  {# ▼▼▼ サイドメニュー ▼▼▼ #}
+  {{ ASIDE_MENU(ASIDE_MENU_ITEMS) }}
+  {# ▲▲▲ サイドメニュー ▲▲▲ #}
 {% endblock %}
 
 {# {% block FIX_CONTENT %}

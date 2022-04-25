@@ -1,0 +1,13 @@
+{% macro default(ITEMS) %}
+<!-- ▼▼▼ サイドメニュー ▼▼▼ -->
+<div class="aside-menu">
+  <ul class="aside-menu__items">
+    {% for ITEM in ITEMS %}
+      <li class="aside-menu__item">
+        <a href="{{ ITEM.link }}" class="aside-menu__link">{{ ITEM.label }}</a>
+      </li>
+    {% endfor %}
+  </ul>
+</div>
+<!-- ▲▲▲ サイドメニュー ▲▲▲ -->
+{% endmacro %}
