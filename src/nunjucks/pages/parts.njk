@@ -108,7 +108,6 @@
 {% from 'components/caution.njk' import default as CAUTION %}
 {% import 'components/heading.njk' as HEADING %}
 {% from 'components/hero.njk' import default as HERO %}
-{% from 'components/modal.njk' import default as MODAL %}
 {% from 'components/quote.njk' import default as QUOTE %}
 {% from 'components/news-list.njk' import default as NEWS_LIST -%}
 {% from 'components/table.njk' import default as TABLE -%}
@@ -190,13 +189,24 @@
     {# ▼▼▼ カード ▼▼▼ #}
     {{ CARDS(CARD_ITEMS) }}
     {# ▲▲▲ カード ▲▲▲ #}
-  </div>
 
-  {# ▼▼▼ モーダル ▼▼▼ #}
-  {% call MODAL('modal') %}
-    <p>モーダル</p>
-  {% endcall %}
-  {# ▲▲▲ モーダル ▲▲▲ #}
+    {# ▼▼▼ フォーム ▼▼▼ #}
+    <div class="form">
+      <div class="form__field">
+        <label for="form1" class="form__label">項目名</label>
+        <input id="form1" type="text" class="form__input">
+      </div>
+      <div class="form__field">
+        <label for="form2" class="form__label">項目名</label>
+        <input id="form2" type="text" class="form__input">
+      </div>
+      <div class="form__field">
+        <label for="form3" class="form__label">項目名</label>
+        <textarea id="form3" cols="30" rows="10" class="form__textarea"></textarea>
+      </div>
+    </div>
+    {# ▲▲▲ フォーム ▲▲▲ #}
+  </div>
 {% endblock %}
 
 {# {% block FIX_CONTENT %}
