@@ -1,0 +1,81 @@
+{% extends 'layouts/has-aside.njk' %}
+{% set PAGE_DATA = {
+  TITLE: 'ページタイトル',
+  DESCRIPTION: 'ページ概要',
+  PATH: '',
+  NAV: 'about',
+  ROOT: './',
+  SCHEMA_ITEMS: [
+    {
+      ID: CONSTANTS.DOMAIN,
+      NAME: CONSTANTS.SITE_NAME
+    },
+    {
+      ID: CONSTANTS.DOMAIN + 'about.html',
+      NAME: '○○○○について'
+    }
+  ],
+  BREADCRUMB_ITEMS: [
+    {
+      LINK: '/',
+      LABEL: 'トップ'
+    },
+    {
+      LINK: '/about.html',
+      LABEL: '○○○○について'
+    }
+  ]
+} %}
+
+{% set TABLE_ITEMS = [
+  {
+    header: '項目名',
+    data: 'テキストが入ります。テキストが入ります。<br>テキストが入ります。テキストが入ります。'
+  },
+  {
+    header: '項目名',
+    data: 'テキストが入ります。<br>テキストが入ります。テキストが入ります。テキストが入ります。'
+  },
+  {
+    header: '項目名',
+    data: 'テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。'
+  }
+] %}
+
+{# ▼▼▼ コンポーネント読み込み ▼▼▼ #}
+{% from 'components/breadcrumb.njk' import default as BREADCRUMB %}
+{% import 'components/heading.njk' as HEADING %}
+{% from 'components/hero.njk' import default as HERO %}
+{% from 'components/table.njk' import default as TABLE -%}
+{# ▲▲▲ コンポーネント読み込み ▲▲▲ #}
+
+{% block HERO_CONTENT %}
+  {# ▼▼▼ ヒーロー ▼▼▼ #}
+  {{ HERO('○○○○について', 'ABOUT', 'https://picsum.photos/id/1016/1200/200') }}
+  {# ▲▲▲ ヒーロー ▲▲▲ #}
+
+  {# ▼▼▼ パンくず ▼▼▼ #}
+  {{ BREADCRUMB(PAGE_DATA.BREADCRUMB_ITEMS) }}
+  {# ▲▲▲ パンくず ▲▲▲ #}
+{% endblock %}
+
+{% block PAGE_CONTENT %}
+  {# ▼▼▼ 見出し ▼▼▼ #}
+  {{ HEADING.default('大見出し') }}
+  {{ HEADING.sub('中見出し') }}
+  {# ▲▲▲ 見出し ▲▲▲ #}
+
+  {# ▼▼▼ テーブル ▼▼▼ #}
+  {{ TABLE(TABLE_ITEMS) }}
+  {# ▲▲▲ テーブル ▲▲▲ #}
+{% endblock %}
+
+{% block ASIDE_CONTENT %}
+テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。
+{% endblock %}
+
+{# {% block FIX_CONTENT %}
+<!-- ▼▼▼ 固定要素（モーダルなど） ▼▼▼ -->
+<div>固定要素</div>
+<!-- ▲▲▲ 固定要素（モーダルなど） ▲▲▲ -->
+{% endblock %} #}

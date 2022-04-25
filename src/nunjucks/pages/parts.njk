@@ -113,7 +113,7 @@
 {% from 'components/table.njk' import default as TABLE -%}
 {# ▲▲▲ コンポーネント読み込み ▲▲▲ #}
 
-{% block PAGE_CONTENT %}
+{% block HERO_CONTENT %}
   {# ▼▼▼ ヒーロー ▼▼▼ #}
   {{ HERO('パーツ集', 'PARTS', 'https://picsum.photos/id/1015/1200/200') }}
   {# ▲▲▲ ヒーロー ▲▲▲ #}
@@ -121,92 +121,92 @@
   {# ▼▼▼ パンくず ▼▼▼ #}
   {{ BREADCRUMB(PAGE_DATA.BREADCRUMB_ITEMS) }}
   {# ▲▲▲ パンくず ▲▲▲ #}
-  
-  <div class="container --single pt-5 pb-5">
-    {# ▼▼▼ 見出し ▼▼▼ #}
-    {{ HEADING.default('大見出し') }}
-    {{ HEADING.sub('中見出し') }}
-    {# ▲▲▲ 見出し ▲▲▲ #}
+{% endblock %}
 
-    {# ▼▼▼ ボタン ▼▼▼ #}
-    <div class="button__container">
-      <a href="#" class="button --primary">ボタン</a>
-      <a href="#" class="button --secondary">ボタン</a>
-      <a href="#" class="button --accent">ボタン</a>
-      <a href="#" class="button --primary --rounded">角丸ボタン</a>
-      <a href="#" class="button --secondary --rounded">角丸ボタン</a>
-      <a href="#" class="button --accent --rounded">角丸ボタン</a>
-      <a href="#" class="button --primary --has-icon">
-        <span><i class="fas fa-envelope button__icon"></i>アイコンボタン</span>
-      </a>
-      <a href="#" class="button --secondary --has-icon">
-        <span><i class="fas fa-angle-down button__icon"></i>アイコンボタン</span>
-      </a>
-      <a href="#" class="button --accent --has-icon">
-        <span><i class="fas fa-bookmark button__icon"></i>アイコンボタン</span>
-      </a>
-      <a href="#" class="button --white">白ボタン</a>
-      <a href="#" class="button --white --rounded">角丸白ボタン</a>
-      <a href="#" class="button --white --has-icon">
-        <span><i class="fas fa-info-circle button__icon"></i>アイコン白ボタン</span>
-      </a>
-    </div>
-    {# ▲▲▲ ボタン ▲▲▲ #}
+{% block PAGE_CONTENT %}
+  {# ▼▼▼ 見出し ▼▼▼ #}
+  {{ HEADING.default('大見出し') }}
+  {{ HEADING.sub('中見出し') }}
+  {# ▲▲▲ 見出し ▲▲▲ #}
 
-    {# ▼▼▼ お知らせ ▼▼▼ #}
-    {{ NEWS_LIST(NEWS_LIST_ITEMS) }}
-    {# ▲▲▲ お知らせ ▲▲▲ #}
-
-    {# ▼▼▼ 引用 ▼▼▼ #}
-    {% call QUOTE() %}
-      <p>テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。</p>
-      <p>テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。</p>
-      <p>テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。</p>
-    {% endcall %}
-    {# ▲▲▲ 引用 ▲▲▲ #}
-
-    {# ▼▼▼ 注意事項 ▼▼▼ #}
-    {% call CAUTION('○○についての注意事項') %}
-      <p>テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。</p>
-      <p>テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。</p>
-      <p>テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。</p>
-    {% endcall %}
-    {# ▲▲▲ 注意事項 ▲▲▲ #}
-
-    {# ▼▼▼ テーブル ▼▼▼ #}
-    {{ TABLE(TABLE_ITEMS) }}
-    {# ▲▲▲ テーブル ▲▲▲ #}
-
-    {# ▼▼▼ 画像 ▼▼▼ #}
-    <div class="image">
-      <img src="https://picsum.photos/id/1015/600/200" alt="">
-    </div>
-    <div class="image --full">
-      <img src="https://picsum.photos/id/1015/1200/200" alt="">
-    </div>
-    {# ▲▲▲ 画像 ▲▲▲ #}
-
-    {# ▼▼▼ カード ▼▼▼ #}
-    {{ CARDS(CARD_ITEMS) }}
-    {# ▲▲▲ カード ▲▲▲ #}
-
-    {# ▼▼▼ フォーム ▼▼▼ #}
-    <div class="form">
-      <div class="form__field">
-        <label for="form1" class="form__label">項目名</label>
-        <input id="form1" type="text" class="form__input">
-      </div>
-      <div class="form__field">
-        <label for="form2" class="form__label">項目名</label>
-        <input id="form2" type="text" class="form__input">
-      </div>
-      <div class="form__field">
-        <label for="form3" class="form__label">項目名</label>
-        <textarea id="form3" cols="30" rows="10" class="form__textarea"></textarea>
-      </div>
-    </div>
-    {# ▲▲▲ フォーム ▲▲▲ #}
+  {# ▼▼▼ ボタン ▼▼▼ #}
+  <div class="button__container">
+    <a href="#" class="button --primary">ボタン</a>
+    <a href="#" class="button --secondary">ボタン</a>
+    <a href="#" class="button --accent">ボタン</a>
+    <a href="#" class="button --primary --rounded">角丸ボタン</a>
+    <a href="#" class="button --secondary --rounded">角丸ボタン</a>
+    <a href="#" class="button --accent --rounded">角丸ボタン</a>
+    <a href="#" class="button --primary --has-icon">
+      <span><i class="fas fa-envelope button__icon"></i>アイコンボタン</span>
+    </a>
+    <a href="#" class="button --secondary --has-icon">
+      <span><i class="fas fa-angle-down button__icon"></i>アイコンボタン</span>
+    </a>
+    <a href="#" class="button --accent --has-icon">
+      <span><i class="fas fa-bookmark button__icon"></i>アイコンボタン</span>
+    </a>
+    <a href="#" class="button --white">白ボタン</a>
+    <a href="#" class="button --white --rounded">角丸白ボタン</a>
+    <a href="#" class="button --white --has-icon">
+      <span><i class="fas fa-info-circle button__icon"></i>アイコン白ボタン</span>
+    </a>
   </div>
+  {# ▲▲▲ ボタン ▲▲▲ #}
+
+  {# ▼▼▼ お知らせ ▼▼▼ #}
+  {{ NEWS_LIST(NEWS_LIST_ITEMS) }}
+  {# ▲▲▲ お知らせ ▲▲▲ #}
+
+  {# ▼▼▼ 引用 ▼▼▼ #}
+  {% call QUOTE() %}
+    <p>テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。</p>
+    <p>テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。</p>
+    <p>テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。</p>
+  {% endcall %}
+  {# ▲▲▲ 引用 ▲▲▲ #}
+
+  {# ▼▼▼ 注意事項 ▼▼▼ #}
+  {% call CAUTION('○○についての注意事項') %}
+    <p>テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。</p>
+    <p>テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。</p>
+    <p>テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。</p>
+  {% endcall %}
+  {# ▲▲▲ 注意事項 ▲▲▲ #}
+
+  {# ▼▼▼ テーブル ▼▼▼ #}
+  {{ TABLE(TABLE_ITEMS) }}
+  {# ▲▲▲ テーブル ▲▲▲ #}
+
+  {# ▼▼▼ 画像 ▼▼▼ #}
+  <div class="image">
+    <img src="https://picsum.photos/id/1015/600/200" alt="">
+  </div>
+  <div class="image --full">
+    <img src="https://picsum.photos/id/1015/1200/200" alt="">
+  </div>
+  {# ▲▲▲ 画像 ▲▲▲ #}
+
+  {# ▼▼▼ カード ▼▼▼ #}
+  {{ CARDS(CARD_ITEMS) }}
+  {# ▲▲▲ カード ▲▲▲ #}
+
+  {# ▼▼▼ フォーム ▼▼▼ #}
+  <div class="form">
+    <div class="form__field">
+      <label for="form1" class="form__label">項目名</label>
+      <input id="form1" type="text" class="form__input">
+    </div>
+    <div class="form__field">
+      <label for="form2" class="form__label">項目名</label>
+      <input id="form2" type="text" class="form__input">
+    </div>
+    <div class="form__field">
+      <label for="form3" class="form__label">項目名</label>
+      <textarea id="form3" cols="30" rows="10" class="form__textarea"></textarea>
+    </div>
+  </div>
+  {# ▲▲▲ フォーム ▲▲▲ #}
 {% endblock %}
 
 {# {% block FIX_CONTENT %}

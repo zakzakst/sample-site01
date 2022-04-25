@@ -1,8 +1,8 @@
-{% macro default(NAV_ITEMS) %}
+{% macro default(NAV_ITEMS, PAGE_DATA) %}
 <!-- ▼▼▼ ヘッダー（PC） ▼▼▼ -->
 <header class="header">
   <div class="header__logo">
-    {% if PAGE_DATA.NAV === 'top' %}
+    {% if PAGE_DATA.NAV == 'top' %}
       <h1>社名○○○○</h1>
     {% else %}
       <a href="/">社名○○○○</a>
@@ -11,14 +11,14 @@
   <ul class="header__nav-items">
     {% for ITEM in NAV_ITEMS %}
       {# クラス名を判定 #}
-      {% if ITEM.id === PAGE_DATA.NAV %}
-        {% set CLASS = ' class="--current"' %}
+      {% if ITEM.id == PAGE_DATA.NAV %}
+        {% set CURRENT_CLASS = ' --current' %}
       {% else %}
-        {% set CLASS = '' %}
+        {% set CURRENT_CLASS = '' %}
       {% endif %}
 
       <li class="header__nav-item">
-        <a class="link" href="{{ ITEM.link }}"{{ CLASS | safe }}>{{ ITEM.label }}</a>
+        <a class="link{{ CURRENT_CLASS }}" href="{{ ITEM.link }}">{{ ITEM.label }}</a>
       </li>
     {% endfor %}
   </ul>

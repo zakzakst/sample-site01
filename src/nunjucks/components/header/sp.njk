@@ -1,4 +1,4 @@
-{% macro default(NAV_ITEMS) %}
+{% macro default(NAV_ITEMS, PAGE_DATA) %}
 <!-- ▼▼▼ ヘッダー（SP） ▼▼▼ -->
 <div class="header-sp__wrapper">
   <div class="header-sp">
@@ -16,14 +16,14 @@
       <ul class="header-sp__menu-nav-items">
         {% for ITEM in NAV_ITEMS %}
           {# クラス名を判定 #}
-          {% if ITEM.id === PAGE_DATA.NAV %}
-            {% set CLASS = ' class="--current"' %}
+          {% if ITEM.id == PAGE_DATA.NAV %}
+            {% set CURRENT_CLASS = ' --current' %}
           {% else %}
-            {% set CLASS = '' %}
+            {% set CURRENT_CLASS = '' %}
           {% endif %}
 
           <li class="header-sp__menu-nav-item">
-            <a class="link" href="{{ ITEM.link }}"{{ CLASS | safe }}>{{ ITEM.label }}</a>
+            <a class="link{{ CURRENT_CLASS }}" href="{{ ITEM.link }}">{{ ITEM.label }}</a>
           </li>
         {% endfor %}
       </ul>
