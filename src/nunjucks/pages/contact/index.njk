@@ -1,0 +1,75 @@
+{% extends 'layouts/default.njk' %}
+{% set PAGE_DATA = {
+  TITLE: 'ページタイトル',
+  DESCRIPTION: 'ページ概要',
+  PATH: '',
+  NAV: 'parts',
+  ROOT: '../',
+  SCHEMA_ITEMS: [
+    {
+      ID: CONSTANTS.DOMAIN,
+      NAME: CONSTANTS.SITE_NAME
+    },
+    {
+      ID: CONSTANTS.DOMAIN + 'contact/',
+      NAME: 'お問い合わせ'
+    }
+  ],
+  BREADCRUMB_ITEMS: [
+    {
+      LINK: '/',
+      LABEL: 'トップ'
+    },
+    {
+      LINK: '/contact/',
+      LABEL: 'お問い合わせ'
+    }
+  ]
+} %}
+
+{# ▼▼▼ コンポーネント読み込み ▼▼▼ #}
+{% from 'components/breadcrumb.njk' import default as BREADCRUMB %}
+{# {% import 'components/heading.njk' as HEADING %} #}
+{% from 'components/hero.njk' import default as HERO %}
+{# ▲▲▲ コンポーネント読み込み ▲▲▲ #}
+
+{% block HERO_CONTENT %}
+  {# ▼▼▼ ヒーロー ▼▼▼ #}
+  {{ HERO('お問い合わせ', 'CONTACT', 'https://picsum.photos/id/1065/1200/200') }}
+  {# ▲▲▲ ヒーロー ▲▲▲ #}
+
+  {# ▼▼▼ パンくず ▼▼▼ #}
+  {{ BREADCRUMB(PAGE_DATA.BREADCRUMB_ITEMS) }}
+  {# ▲▲▲ パンくず ▲▲▲ #}
+{% endblock %}
+
+{% block PAGE_CONTENT %}
+  {# ▼▼▼ フォーム ▼▼▼ #}
+  <div class="form">
+    <div class="form__field">
+      <label for="form1" class="form__label">項目名</label>
+      <input id="form1" type="text" class="form__input">
+    </div>
+    <div class="form__field">
+      <label for="form2" class="form__label">項目名</label>
+      <input id="form2" type="text" class="form__input">
+    </div>
+    <div class="form__field">
+      <label for="form3" class="form__label">項目名</label>
+      <textarea id="form3" cols="30" rows="10" class="form__textarea"></textarea>
+    </div>
+  </div>
+  {# ▲▲▲ フォーム ▲▲▲ #}
+
+  {# ▼▼▼ ボタン ▼▼▼ #}
+  <div class="button__container mt-4">
+    <a href="#" class="button --accent --rounded">角丸ボタン</a>
+  </div>
+  {# ▲▲▲ ボタン ▲▲▲ #}
+{% endblock %}
+
+{# {% block FIX_CONTENT %}
+<!-- ▼▼▼ 固定要素（モーダルなど） ▼▼▼ -->
+<div>固定要素</div>
+<!-- ▲▲▲ 固定要素（モーダルなど） ▲▲▲ -->
+{% endblock %} #}
