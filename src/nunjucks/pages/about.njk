@@ -76,14 +76,44 @@
 {% endblock %}
 
 {% block PAGE_CONTENT %}
-  {# ▼▼▼ 見出し ▼▼▼ #}
-  {{ HEADING.default('大見出し') }}
-  {{ HEADING.sub('中見出し') }}
-  {# ▲▲▲ 見出し ▲▲▲ #}
+  <section>
+    {{ HEADING.default('○○○○の想い') }}
+    <div class="content">
+      <p>テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。</p>
+      <p>テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。</p>
+    </div>
+    <section class="mt-4">
+      {{ HEADING.sub('中見出し') }}
+      <div class="content mt-2">
+        <p>テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。</p>
+        <p>テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。</p>
+      </div>
+      <div class="content mt-2">
+        <p>テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。</p>
+        <p>テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。</p>
+      </div>
+      <div class="image --full mt-4">
+        <img src="https://picsum.photos/id/1018/1200/200" alt="">
+      </div>
+    </section>
+    <section class="mt-4">
+      {{ HEADING.sub('中見出し') }}
+      <div class="content mt-2">
+        <p>テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。</p>
+        <p>テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。</p>
+      </div>
+      <div class="image --full mt-4">
+        <img src="https://picsum.photos/id/1019/1200/200" alt="">
+      </div>
+    </section>
+  </section>
 
-  {# ▼▼▼ テーブル ▼▼▼ #}
-  {{ TABLE(TABLE_ITEMS) }}
-  {# ▲▲▲ テーブル ▲▲▲ #}
+  <section class="mt-6">
+    {{ HEADING.default('企業情報') }}
+    <div class="mt-2">
+      {{ TABLE(TABLE_ITEMS) }}
+    </div>
+  </section>
 {% endblock %}
 
 {% block ASIDE_CONTENT %}
