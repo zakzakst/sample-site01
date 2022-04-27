@@ -10,7 +10,7 @@
   {% endblock %}
   {# ▲▲▲ HEAD（ページ専用） ▲▲▲ #}
 </head>
-<body class="layout__body">
+<body class="layout__body" data-barba="wrapper">
   {# ▼▼▼ ページローダー ▼▼▼ #}
   {# {% include '../components/page-loader.njk' %} #}
   {# ▲▲▲ ページローダー ▲▲▲ #}
@@ -20,7 +20,7 @@
   {# ▲▲▲ ヘッダー ▲▲▲ #}
 
   <!-- ▼▼▼ ページ内容 ▼▼▼ -->
-  <div id="js-layout-content" class="layout__content">
+  <div id="js-layout-content" class="layout__content" data-barba="container">
     <main>
       {% block PAGE_CONTENT %}
       {% endblock %}
