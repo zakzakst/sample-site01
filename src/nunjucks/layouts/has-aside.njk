@@ -3,6 +3,7 @@
 <head>
   {# ▼▼▼ HEAD（共通） ▼▼▼ #}
   {% include '../components/head/_index.njk' %}
+  {% include '../components/page-loader/page-loader-head.njk' %}
   {# ▲▲▲ HEAD（共通） ▲▲▲ #}
 
   {# ▼▼▼ HEAD（ページ専用） ▼▼▼ #}
@@ -12,7 +13,7 @@
 </head>
 <body class="layout__body">
   {# ▼▼▼ ページローダー ▼▼▼ #}
-  {# {% include '../components/page-loader.njk' %} #}
+  {% include '../components/page-loader/page-loader.njk' %}
   {# ▲▲▲ ページローダー ▲▲▲ #}
 
   {# ▼▼▼ ヘッダー ▼▼▼ #}
