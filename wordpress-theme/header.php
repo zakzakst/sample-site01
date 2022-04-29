@@ -7,10 +7,12 @@
     include('components/head/ogp.php');
     include('components/head/schema.php');
     include('components/head/files.php');
+    include('components/page-loader/page-loader-head.php');
     wp_head();
   ?>
 </head>
-<body <?php body_class(); ?>>
+<body class="layout__body" <?php body_class(); ?>>
 <?php
+  include('components/page-loader/page-loader.php');
   include('components/header/pc.php');
   include('components/header/sp.php');
