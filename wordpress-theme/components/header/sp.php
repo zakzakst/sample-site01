@@ -44,7 +44,7 @@ $NAV_ITEMS = array(
   <div id="js-header-sp-menu" class="header-sp__menu">
     <div class="header-sp__menu-content">
       <ul class="header-sp__menu-nav-items">
-        <?php foreach($NAV_ITEMS as $ITEM): ?>
+        <?php foreach ($NAV_ITEMS as $ITEM) : ?>
           <li class="header-sp__menu-nav-item">
             <a class="link --current" href="<?php echo $ITEM['link']; ?>"><?php echo $ITEM['label']; ?></a>
           </li>

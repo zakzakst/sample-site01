@@ -67,7 +67,7 @@ $NAV_ITEMS = array(
       </div>
       <div class="footer__content-info">
         <ul class="footer__content-sns">
-          <?php foreach($SNS_ITEMS as $ITEM): ?>
+          <?php foreach ($SNS_ITEMS as $ITEM) : ?>
             <li>
               <a href="<?php echo $ITEM['href']; ?>" class="footer__content-sns-link">
                 <i class="<?php echo $ITEM['icon']; ?>"></i>
@@ -76,7 +76,7 @@ $NAV_ITEMS = array(
           <?php endforeach; ?>
         </ul>
         <dl class="footer__content-table">
-          <?php foreach($TABLE_ITEMS as $ITEM): ?>
+          <?php foreach ($TABLE_ITEMS as $ITEM) : ?>
             <dt><?php echo $ITEM['term']; ?></dt>
             <dd><?php echo $ITEM['definition']; ?></dd>
           <?php endforeach; ?>
@@ -87,7 +87,7 @@ $NAV_ITEMS = array(
   <div class="footer__bottom">
     <div class="container">
       <ul class="footer__nav-items">
-        <?php foreach($NAV_ITEMS as $ITEM): ?>
+        <?php foreach ($NAV_ITEMS as $ITEM) : ?>
           <li class="footer__nav-item">
             <a href="<?php echo $ITEM['link']; ?>"><?php echo $ITEM['label']; ?></a>
           </li>

@@ -35,7 +35,7 @@ $NAV_ITEMS = array(
     <a href="/">社名○○○○</a>
   </div>
   <ul class="header__nav-items">
-    <?php foreach($NAV_ITEMS as $ITEM): ?>
+    <?php foreach ($NAV_ITEMS as $ITEM) : ?>
       <li class="header__nav-item">
         <a class="link --current" href="<?php echo $ITEM['link']; ?>"><?php echo $ITEM['label']; ?></a>
       </li>
