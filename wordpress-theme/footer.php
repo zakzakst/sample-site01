@@ -69,16 +69,16 @@ $NAV_ITEMS = array(
         <ul class="footer__content-sns">
           <?php foreach($SNS_ITEMS as $ITEM): ?>
             <li>
-              <!-- <a href="<?php echo $ITEM->href; ?>" class="footer__content-sns-link">
-                <i class="<?php echo $ITEM->icon; ?>"></i>
-              </a> -->
+              <a href="<?php echo $ITEM['href']; ?>" class="footer__content-sns-link">
+                <i class="<?php echo $ITEM['icon']; ?>"></i>
+              </a>
             </li>
           <?php endforeach; ?>
         </ul>
         <dl class="footer__content-table">
           <?php foreach($TABLE_ITEMS as $ITEM): ?>
-            <!-- <dt><?php echo $ITEM->term; ?></dt>
-            <dd><?php echo $ITEM->definition; ?></dd> -->
+            <dt><?php echo $ITEM['term']; ?></dt>
+            <dd><?php echo $ITEM['definition']; ?></dd>
           <?php endforeach; ?>
         </dl>
       </div>
@@ -89,7 +89,7 @@ $NAV_ITEMS = array(
       <ul class="footer__nav-items">
         <?php foreach($NAV_ITEMS as $ITEM): ?>
           <li class="footer__nav-item">
-            <!-- <a href="<?php echo $ITEM->link; ?>"><?php echo $ITEM->label; ?></a> -->
+            <a href="<?php echo $ITEM['link']; ?>"><?php echo $ITEM['label']; ?></a>
           </li>
         <?php endforeach; ?>
       </ul>
@@ -98,6 +98,11 @@ $NAV_ITEMS = array(
   </div>
 </footer>
 <!-- ▲▲▲ フッター ▲▲▲ -->
+
+<!-- ▼▼▼ 読み込みファイル（共通） ▼▼▼ -->
+<script src="<?php echo get_template_directory_uri(); ?>/js/script.js"></script>
+<script defer="defer" src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
+<!-- ▲▲▲ 読み込みファイル（共通） ▲▲▲ -->
 
 <?php wp_footer(); ?>
 </body>
