@@ -6,6 +6,9 @@ $BLOCK_NAME: ".header-nav";
   &__container {
     margin-left: 24px;
     font-size: 12px;
+    &.--sp {
+      margin-left: 0;
+    }
   }
 
   &__menu {
@@ -51,6 +54,15 @@ $BLOCK_NAME: ".header-nav";
       }
       &.current-menu-item > a {
         color: g.$c_primary;
+      }
+    }
+    @at-root #{ $BLOCK_NAME }__container.--sp & {
+      flex-direction: column;
+      & > li {
+        padding: 4px 0;
+      }
+      & > li:nth-child(n + 2) {
+        margin-left: 0;
       }
     }
   }
