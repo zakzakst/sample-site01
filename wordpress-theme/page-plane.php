@@ -1,15 +1,17 @@
+<?php
+/*
+Template Name: プレーン
+*/
+?>
+
 <?php get_header(); ?>
 
 <?php if ( have_posts() ) : ?>
   <?php while ( have_posts() ) : the_post(); ?>
     <div id="js-layout-content" class="layout__content" <?php post_class(); ?>>
-      <?php include('components/hero.php'); ?>
-      <?php include('components/breadcrumb.php'); ?>
-      <div class="container --single pt-5 pb-5">
-        <main>
-          <?php the_content(); ?>
-        </main>
-      </div>
+      <main>
+        <?php the_content(); ?>
+      </main>
       <?php include('components/go-top.php'); ?>
     </div>
   <?php endwhile; ?>
