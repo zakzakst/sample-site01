@@ -18,6 +18,7 @@ class GoTop {
   }
 
   init() {
+    if (!this.el) return;
     this.onClickEl();
     this.elShow();
     this.elFix();

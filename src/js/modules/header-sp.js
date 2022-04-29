@@ -13,6 +13,7 @@ class HeaderSp {
   }
 
   init() {
+    if (!this.buttonEl) return;
     this.onClickButton();
     this.onClickMenuBg();
   }
