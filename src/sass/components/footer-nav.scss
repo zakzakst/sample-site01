@@ -1,0 +1,16 @@
+@use "../global" as g;
+
+$BLOCK_NAME: ".footer-nav";
+
+#{ $BLOCK_NAME } {
+  &__menu {
+    text-align: center;
+    & > li {
+      display: inline-block;
+      padding: 0 8px;
+      & > a {
+        @include g.HoverOp();
+      }
+    }
+  }
+}

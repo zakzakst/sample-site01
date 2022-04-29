@@ -98,17 +98,17 @@ $BLOCK_NAME: ".footer";
     background: g.$c_white;
   }
 
-  &__nav-items {
-    text-align: center;
-  }
+  // &__nav-items {
+  //   text-align: center;
+  // }
 
-  &__nav-item {
-    display: inline-block;
-    padding: 0 8px;
-    & > a {
-      @include g.HoverOp();
-    }
-  }
+  // &__nav-item {
+  //   display: inline-block;
+  //   padding: 0 8px;
+  //   & > a {
+  //     @include g.HoverOp();
+  //   }
+  // }
 
   &__copy {
     margin-top: 8px;

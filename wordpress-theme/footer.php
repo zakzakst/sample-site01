@@ -86,13 +86,21 @@ $NAV_ITEMS = array(
   </div>
   <div class="footer__bottom">
     <div class="container">
-      <ul class="footer__nav-items">
+      <?php
+        $args = array(
+          'theme_location' => 'footer-nav',
+          'container_class' => 'footer-nav__container',
+          'menu_class' => 'footer-nav__menu',
+        );
+        wp_nav_menu($args);
+      ?>
+      <!-- <ul class="footer__nav-items">
         <?php foreach ($NAV_ITEMS as $ITEM) : ?>
           <li class="footer__nav-item">
             <a href="<?php echo $ITEM['link']; ?>"><?php echo $ITEM['label']; ?></a>
           </li>
         <?php endforeach; ?>
-      </ul>
+      </ul> -->
       <p class="footer__copy">Copyright &copy; XXXXX <?php echo date('Y'); ?>. All Rights Reserved.</p>
     </div>
   </div>

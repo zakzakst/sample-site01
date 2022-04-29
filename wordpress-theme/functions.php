@@ -5,6 +5,7 @@ remove_filter('the_content', 'wpautop');
 function add_menus() {
   register_nav_menus(array(
     'header-nav' => 'ヘッダーナビゲーション',
+    'footer-nav' => 'フッターナビゲーション',
   ));
 }
 
