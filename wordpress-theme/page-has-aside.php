@@ -6,8 +6,8 @@ Template Name: サイドカラム付き
 
 <?php get_header(); ?>
 
-<?php if ( have_posts() ) : ?>
-  <?php while ( have_posts() ) : the_post(); ?>
+<?php if (have_posts()) : ?>
+  <?php while (have_posts()) : the_post(); ?>
     <div id="js-layout-content" class="layout__content" <?php post_class(); ?>>
       <?php include('components/hero.php'); ?>
       <?php include('components/breadcrumb.php'); ?>

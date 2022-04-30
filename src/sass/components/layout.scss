@@ -26,6 +26,10 @@ $BLOCK_NAME: ".layout";
     }
   }
 
+  &__main {
+    width: 100%;
+  }
+
   &__aside {
     margin-top: 36px;
     @include g.Mq(lg) {

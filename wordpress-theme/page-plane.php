@@ -6,8 +6,8 @@ Template Name: プレーン
 
 <?php get_header(); ?>
 
-<?php if ( have_posts() ) : ?>
-  <?php while ( have_posts() ) : the_post(); ?>
+<?php if (have_posts()) : ?>
+  <?php while (have_posts()) : the_post(); ?>
     <div id="js-layout-content" class="layout__content" <?php post_class(); ?>>
       <main>
         <?php the_content(); ?>

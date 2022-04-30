@@ -1,7 +1,7 @@
 <!-- ▼▼▼ ヘッダー（PC） ▼▼▼ -->
 <header class="header">
   <div class="header__logo">
-    <?php if ( is_front_page()) : ?>
+    <?php if (is_front_page()) : ?>
       <h1>社名○○○○</h1>
     <?php else : ?>
       <a href="/">社名○○○○</a>
