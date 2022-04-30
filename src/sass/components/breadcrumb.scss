@@ -34,11 +34,11 @@ $BLOCK_NAME: ".breadcrumb";
   }
 
   &__link {
-    transition: color g.$d_default;
     &.--active {
       text-decoration: underline;
     }
-    &:hover {
+    &:not(.--active):hover {
+      transition: color g.$d_default;
       color: g.$c_primary_dark;
     }
   }

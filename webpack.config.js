@@ -12,7 +12,8 @@ module.exports = {
     extensions: ['.js'],
   },
   output: {
-    path: `${__dirname}/dist/js`,
+    // path: `${__dirname}/dist/js`,
+    path: `${__dirname}/wordpress-theme/js`,
     filename: '[name].js',
   },
   mode: environment,

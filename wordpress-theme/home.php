@@ -12,7 +12,7 @@
               <a href="<?php the_permalink(); ?>" class="news-list__link">
                 <span class="news-list__info">
                   <time class="news-list__date"><?php echo get_the_date(); ?></time>
-                  <span class="news-list__category">お知らせ</span>
+                  <span class="news-list__category"><?php echo the_field('news_category'); ?></span>
                 </span>
                 <span class="news-list__text"><?php the_title(); ?></span>
                 <span class="news-list__icon">

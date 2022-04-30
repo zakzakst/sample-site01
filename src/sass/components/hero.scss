@@ -27,12 +27,13 @@ $BLOCK_NAME: ".hero";
     right: 0;
     bottom: 0;
     left: 0;
+    background: linear-gradient(45deg, g.$c_primary, g.$c_primary_dark);
     & > img {
       object-fit: cover;
       width: 100%;
       height: 100%;
     }
-    &::after {
+    &.--has-img::after {
       position: absolute;
       top: 0;
       right: 0;
