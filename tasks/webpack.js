@@ -8,7 +8,8 @@ const webpack = require('webpack');
 /**
  * 変数設定
  */
-const dist = './dist/js';
+// const dist = './dist/js';
+const dist = './wordpress-theme/js';
 const webpackConf = require('../webpack.config');
 
 /**

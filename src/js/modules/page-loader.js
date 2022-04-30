@@ -8,7 +8,8 @@ export function PageLoaderInit() {
 class PageLoader {
   constructor() {
     this.el = document.getElementById('js-page-loader');
-    this.speed = 1;
+    this.contentEl = document.getElementById('js-page-loader-content');
+    this.speed = 0.5;
     this.closeDelay = 400;
   }
 
@@ -22,14 +23,22 @@ class PageLoader {
   }
 
   closeLoader() {
-    this.clearWindow();
+    const self = this;
     const tl = gsap.timeline();
-    tl.to(this.el, {
+    tl.to(this.contentEl, {
       autoAlpha: 0,
       duration: this.speed,
-    }).set(this.el, {
-      display: 'none',
-    });
+      onComplete() {
+        self.clearWindow();
+      },
+    })
+      .to(this.el, {
+        autoAlpha: 0,
+        duration: this.speed,
+      })
+      .set(this.el, {
+        display: 'none',
+      });
   }
 
   clearWindow() {

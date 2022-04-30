@@ -1,6 +1,6 @@
 <!-- ▼▼▼ ページローダー ▼▼▼ -->
 <div id="js-page-loader" class="page-loader">
-  <div class="dot-wave">
+  <div id="js-page-loader-content" class="dot-wave">
     <div class="dot-wave__dot"></div>
     <div class="dot-wave__dot"></div>
     <div class="dot-wave__dot"></div>
