@@ -5,130 +5,26 @@
   <?php include('components/breadcrumb.php'); ?>
   <div class="layout__container --has-aside container pt-5 pb-5">
     <main class="layout__main">
-      <!-- ▼▼▼ ニュース一覧 ▼▼▼ -->
-      <ul class="news-list">
-        <li class="news-list__item">
-          <a href="/news/detail.html" class="news-list__link">
-            <span class="news-list__info">
-              <span class="news-list__date">2022.01.03</span>
-              <span class="news-list__category">お知らせ</span>
-            </span>
-            <span class="news-list__text">テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。</span>
-            <span class="news-list__icon">
-              <i class="fas fa-angle-right"></i>
-            </span>
-          </a>
-        </li>
-        <li class="news-list__item">
-          <a href="/news/detail.html" class="news-list__link">
-            <span class="news-list__info">
-              <span class="news-list__date">2022.01.02</span>
-              <span class="news-list__category">イベント</span>
-            </span>
-            <span class="news-list__text">テキストが入ります。テキストが入ります。テキストが入ります。</span>
-            <span class="news-list__icon">
-              <i class="fas fa-angle-right"></i>
-            </span>
-          </a>
-        </li>
-        <li class="news-list__item">
-          <a href="/news/detail.html" class="news-list__link">
-            <span class="news-list__info">
-              <span class="news-list__date">2022.01.01</span>
-              <span class="news-list__category">お知らせ</span>
-            </span>
-            <span class="news-list__text">テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。</span>
-            <span class="news-list__icon">
-              <i class="fas fa-angle-right"></i>
-            </span>
-          </a>
-        </li>
-        <li class="news-list__item">
-          <a href="/news/detail.html" class="news-list__link">
-            <span class="news-list__info">
-              <span class="news-list__date">2022.01.03</span>
-              <span class="news-list__category">お知らせ</span>
-            </span>
-            <span class="news-list__text">テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。</span>
-            <span class="news-list__icon">
-              <i class="fas fa-angle-right"></i>
-            </span>
-          </a>
-        </li>
-        <li class="news-list__item">
-          <a href="/news/detail.html" class="news-list__link">
-            <span class="news-list__info">
-              <span class="news-list__date">2022.01.02</span>
-              <span class="news-list__category">イベント</span>
-            </span>
-            <span class="news-list__text">テキストが入ります。テキストが入ります。テキストが入ります。</span>
-            <span class="news-list__icon">
-              <i class="fas fa-angle-right"></i>
-            </span>
-          </a>
-        </li>
-        <li class="news-list__item">
-          <a href="/news/detail.html" class="news-list__link">
-            <span class="news-list__info">
-              <span class="news-list__date">2022.01.01</span>
-              <span class="news-list__category">お知らせ</span>
-            </span>
-            <span class="news-list__text">テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。</span>
-            <span class="news-list__icon">
-              <i class="fas fa-angle-right"></i>
-            </span>
-          </a>
-        </li>
-        <li class="news-list__item">
-          <a href="/news/detail.html" class="news-list__link">
-            <span class="news-list__info">
-              <span class="news-list__date">2022.01.03</span>
-              <span class="news-list__category">お知らせ</span>
-            </span>
-            <span class="news-list__text">テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。</span>
-            <span class="news-list__icon">
-              <i class="fas fa-angle-right"></i>
-            </span>
-          </a>
-        </li>
-        <li class="news-list__item">
-          <a href="/news/detail.html" class="news-list__link">
-            <span class="news-list__info">
-              <span class="news-list__date">2022.01.02</span>
-              <span class="news-list__category">イベント</span>
-            </span>
-            <span class="news-list__text">テキストが入ります。テキストが入ります。テキストが入ります。</span>
-            <span class="news-list__icon">
-              <i class="fas fa-angle-right"></i>
-            </span>
-          </a>
-        </li>
-        <li class="news-list__item">
-          <a href="/news/detail.html" class="news-list__link">
-            <span class="news-list__info">
-              <span class="news-list__date">2022.01.01</span>
-              <span class="news-list__category">お知らせ</span>
-            </span>
-            <span class="news-list__text">テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。</span>
-            <span class="news-list__icon">
-              <i class="fas fa-angle-right"></i>
-            </span>
-          </a>
-        </li>
-        <li class="news-list__item">
-          <a href="/news/detail.html" class="news-list__link">
-            <span class="news-list__info">
-              <span class="news-list__date">2022.01.01</span>
-              <span class="news-list__category">お知らせ</span>
-            </span>
-            <span class="news-list__text">テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。</span>
-            <span class="news-list__icon">
-              <i class="fas fa-angle-right"></i>
-            </span>
-          </a>
-        </li>
-      </ul>
-      <!-- ▲▲▲ ニュース一覧 ▲▲▲ -->
+      <?php if (have_posts()) : ?>
+        <ul class="news-list">
+          <?php while (have_posts()) : the_post(); ?>
+            <li class="news-list__item">
+              <a href="<?php the_permalink(); ?>" class="news-list__link">
+                <span class="news-list__info">
+                  <time class="news-list__date"><?php echo get_the_date(); ?></time>
+                  <span class="news-list__category">お知らせ</span>
+                </span>
+                <span class="news-list__text"><?php the_title(); ?></span>
+                <span class="news-list__icon">
+                  <i class="fas fa-angle-right"></i>
+                </span>
+              </a>
+            </li>
+          <?php endwhile; ?>
+        </ul>
+      <?php else : ?>
+        <h2>投稿が見つかりません。</h2>
+      <?php endif; ?>
     </main>
     <aside class="layout__aside">
       <div class="layout__aside-content">
