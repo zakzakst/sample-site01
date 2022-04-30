@@ -2,7 +2,7 @@
 <div class="header-sp__wrapper">
   <div class="header-sp">
     <div class="header-sp__logo">
-      <?php if (is_home() || is_front_page()) : ?>
+      <?php if ( is_front_page()) : ?>
         <span>社名○○○○</span>
       <?php else : ?>
         <a href="/">社名○○○○</a>
