@@ -1,33 +1,8 @@
 <?php get_header(); ?>
 
 <div id="js-layout-content" class="layout__content">
-  <!-- ▼▼▼ ヒーロー ▼▼▼ -->
-  <div class="hero">
-    <div class="hero__text">
-      <div class="container">
-        <h1 class="hero__title">404</h1>
-        <p class="hero__sub-title">NOT FOUND</p>
-      </div>
-    </div>
-    <div class="hero__bg">
-      <img src="https://picsum.photos/id/1065/1200/200" alt>
-    </div>
-  </div>
-  <!-- ▲▲▲ ヒーロー ▲▲▲ -->
-  <!-- ▼▼▼ パンくず ▼▼▼ -->
-  <div class="breadcrumb">
-    <div class="container">
-      <ul class="breadcrumb__items">
-        <li class="breadcrumb__item">
-          <a href="/" class="breadcrumb__link">トップ</a>
-        </li>
-        <li class="breadcrumb__item">
-          <a href="/404.html" class="breadcrumb__link --active">ページが見つかりませんでした</a>
-        </li>
-      </ul>
-    </div>
-  </div>
-  <!-- ▲▲▲ パンくず ▲▲▲ -->
+  <?php include('components/hero.php'); ?>
+  <?php include('components/breadcrumb.php'); ?>
   <div class="container --single pt-5 pb-5">
     <main>
       <section>
