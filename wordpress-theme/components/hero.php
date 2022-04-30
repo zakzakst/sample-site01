@@ -3,7 +3,9 @@
   <div class="hero__text">
     <div class="container">
       <h1 class="hero__title"><?php the_title(); ?></h1>
-      <p class="hero__sub-title">ABOUT</p>
+      <?php if (get_field('sub_title')) : ?>
+        <p class="hero__sub-title"><?php echo the_field('sub_title'); ?></p>
+      <?php endif; ?>
     </div>
   </div>
   <div class="hero__bg">
