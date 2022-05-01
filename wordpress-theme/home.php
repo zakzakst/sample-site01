@@ -25,6 +25,13 @@
       <?php else : ?>
         <h2>投稿が見つかりません。</h2>
       <?php endif; ?>
+      <?php
+        $args = array(
+          'prev_text' => '<i class="fas fa-arrow-left"></i>',
+          'next_text' => '<i class="fas fa-arrow-right"></i>',
+        );
+        the_posts_pagination($args);
+      ?>
     </main>
     <aside class="layout__aside">
       <div class="layout__aside-content">

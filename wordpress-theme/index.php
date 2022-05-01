@@ -8,6 +8,14 @@
       <div class="layout__container --has-aside container pt-5 pb-5">
         <main class="layout__main">
           <?php the_content(); ?>
+          <div class="pagination mt-6">
+            <div class="pagination__prev">
+              <?php previous_post_link('%link', '<i class="pagination__icon fas fa-arrow-left"></i><span class="pagination__text">%title</span>'); ?>
+            </div>
+            <div class="pagination__next">
+              <?php next_post_link('%link', '<i class="pagination__icon fas fa-arrow-right"></i><span class="pagination__text">%title</span>'); ?>
+            </div>
+          </div>
         </main>
         <aside class="layout__aside">
           <div class="layout__aside-content">
