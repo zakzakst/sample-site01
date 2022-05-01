@@ -105,42 +105,35 @@
       </h2>
       <!-- ▼▼▼ ニュース一覧 ▼▼▼ -->
       <ul class="news-list">
-        <li class="news-list__item">
-          <a href="/news/detail.html" class="news-list__link">
-            <span class="news-list__info">
-              <span class="news-list__date">2022.01.03</span>
-              <span class="news-list__category">お知らせ</span>
-            </span>
-            <span class="news-list__text">テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。</span>
-            <span class="news-list__icon">
-              <i class="fas fa-angle-right"></i>
-            </span>
-          </a>
-        </li>
-        <li class="news-list__item">
-          <a href="/news/detail.html" class="news-list__link">
-            <span class="news-list__info">
-              <span class="news-list__date">2022.01.02</span>
-              <span class="news-list__category">イベント</span>
-            </span>
-            <span class="news-list__text">テキストが入ります。テキストが入ります。テキストが入ります。</span>
-            <span class="news-list__icon">
-              <i class="fas fa-angle-right"></i>
-            </span>
-          </a>
-        </li>
-        <li class="news-list__item">
-          <a href="/news/detail.html" class="news-list__link">
-            <span class="news-list__info">
-              <span class="news-list__date">2022.01.01</span>
-              <span class="news-list__category">お知らせ</span>
-            </span>
-            <span class="news-list__text">テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。</span>
-            <span class="news-list__icon">
-              <i class="fas fa-angle-right"></i>
-            </span>
-          </a>
-        </li>
+        <?php
+          $args = array(
+            'post_type' => 'post',
+            'posts_per_page' => 3,
+          );
+          $new_query = new WP_Query($args);
+          if ($new_query->have_posts()) :
+        ?>
+          <?php
+            while($new_query->have_posts()) :
+            $new_query->the_post();
+          ?>
+            <li class="news-list__item">
+              <a href="<?php the_permalink(); ?>" class="news-list__link">
+                <span class="news-list__info">
+                  <span class="news-list__date"><?php echo get_the_date(); ?></span>
+                  <span class="news-list__category"><?php echo the_field('news_category'); ?></span>
+                </span>
+                <span class="news-list__text"><?php the_title(); ?></span>
+                <span class="news-list__icon">
+                  <i class="fas fa-angle-right"></i>
+                </span>
+              </a>
+            </li>
+          <?php
+            endwhile;
+            wp_reset_postdata();
+          ?>
+        <?php endif; ?>
       </ul>
       <!-- ▲▲▲ ニュース一覧 ▲▲▲ -->
       <div class="text-center mt-3">
