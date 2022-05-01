@@ -1,0 +1,85 @@
+@use "../global" as g;
+
+$BLOCK_NAME: ".pagination";
+$height_item: 48px;
+@mixin LinkStyle() {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 48px;
+  height: 100%;
+  padding: 4px 8px;
+  border-radius: g.$radius_default;
+  border: 1px solid g.$c_border;
+  &:not(span) {
+    @include g.HoverOp();
+  }
+}
+
+#{ $BLOCK_NAME } {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  &__next,
+  &__prev {
+    width: 160px;
+    & > a {
+      @include LinkStyle();
+      position: relative;
+    }
+  }
+
+  &__prev {
+    order: 1;
+    & > a {
+      padding-left: 24px;
+    }
+  }
+
+  &__next {
+    order: 3;
+    & > a {
+      padding-right: 24px;
+    }
+  }
+
+  &__icon {
+    position: absolute;
+    display: block;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    font-size: 12px;
+    @at-root #{ $BLOCK_NAME }__prev & {
+      left: 8px;
+    }
+    @at-root #{ $BLOCK_NAME }__next & {
+      right: 8px;
+    }
+  }
+
+  &__text {
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+  }
+
+  &__items {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 -4px;
+    & > .page-numbers {
+      @include LinkStyle();
+      flex-wrap: wrap;
+      flex-shrink: 0;
+      height: 48px;
+      margin: 0 4px;
+      &.current {
+        background: g.$c_border;
+        color: g.$c_white;
+      }
+    }
+  }
+}
