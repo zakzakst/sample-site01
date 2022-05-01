@@ -5,6 +5,9 @@
       <?php if (is_404()) : ?>
         <h1 class="hero__title">404</h1>
         <p class="hero__sub-title">NOT FOUND</p>
+      <?php elseif (is_home()) : ?>
+        <h1 class="hero__title">お知らせ</h1>
+        <p class="hero__sub-title">NEWS</p>
       <?php else : ?>
         <h1 class="hero__title"><?php the_title(); ?></h1>
         <?php if (get_field('sub_title')) : ?>

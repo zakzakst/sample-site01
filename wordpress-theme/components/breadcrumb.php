@@ -19,9 +19,15 @@
             <a href="<?php echo esc_url(home_url('/news/')); ?>" class="breadcrumb__link">お知らせ</a>
           </li>
         <?php endif; ?>
-        <li class="breadcrumb__item">
-          <span class="breadcrumb__link --active"><?php the_title(); ?></span>
-        </li>
+        <?php if (is_home()) : ?>
+          <li class="breadcrumb__item">
+            <span class="breadcrumb__link --active">お知らせ</span>
+          </li>
+        <?php else : ?>
+          <li class="breadcrumb__item">
+            <span class="breadcrumb__link --active"><?php the_title(); ?></span>
+          </li>
+        <?php endif; ?>
       <?php endif; ?>
     </ul>
   </div>
