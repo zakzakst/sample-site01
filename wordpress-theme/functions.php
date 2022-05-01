@@ -20,3 +20,13 @@ function custom_pagination_html($template) {
   return $template;
 }
 add_filter('navigation_markup_template','custom_pagination_html');
+
+// ウィジェットの設定
+function add_widget_area() {
+  register_sidebar(array(
+    'id' => 'sidebar',
+    'name' => 'サイドバー',
+    'description' => 'サイドバーに表示する内容',
+  ));
+}
+add_action('widgets_init', 'add_widget_area');
